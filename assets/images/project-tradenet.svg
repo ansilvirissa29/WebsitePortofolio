@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 360" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg-trade" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#1e1b4b" />
+    </linearGradient>
+  </defs>
+  <rect width="600" height="360" fill="url(#bg-trade)"/>
+
+  <!-- Network Nodes / Commerce Graph -->
+  <g stroke="#3555c8" stroke-width="1.5" stroke-dasharray="4,4" opacity="0.4">
+    <line x1="120" y1="180" x2="300" y2="120"/>
+    <line x1="300" y1="120" x2="480" y2="180"/>
+    <line x1="300" y1="120" x2="300" y2="280"/>
+    <line x1="120" y1="180" x2="300" y2="280"/>
+    <line x1="480" y1="180" x2="300" y2="280"/>
+  </g>
+
+  <!-- Central Hub: TradeNet Platform -->
+  <circle cx="300" cy="120" r="42" fill="#3555c8" stroke="#ffffff" stroke-width="3"/>
+  <text x="300" y="118" font-family="Plus Jakarta Sans, sans-serif" font-weight="800" font-size="12" fill="#ffffff" text-anchor="middle">TradeNet</text>
+  <text x="300" y="132" font-family="Plus Jakarta Sans, sans-serif" font-weight="600" font-size="9" fill="#93c5fd" text-anchor="middle">HUB</text>
+
+  <!-- Node 1: UMKM / Sellers -->
+  <circle cx="120" cy="180" r="34" fill="#1e293b" stroke="#ff3131" stroke-width="2"/>
+  <text x="120" y="178" font-family="Plus Jakarta Sans, sans-serif" font-weight="700" font-size="11" fill="#ffffff" text-anchor="middle">UMKM</text>
+  <text x="120" y="192" font-family="Plus Jakarta Sans, sans-serif" font-size="8" fill="#ff3131" text-anchor="middle">Sellers</text>
+
+  <!-- Node 2: Direct Buyers -->
+  <circle cx="480" cy="180" r="34" fill="#1e293b" stroke="#3555c8" stroke-width="2"/>
+  <text x="480" y="178" font-family="Plus Jakarta Sans, sans-serif" font-weight="700" font-size="11" fill="#ffffff" text-anchor="middle">Buyers</text>
+  <text x="480" y="192" font-family="Plus Jakarta Sans, sans-serif" font-size="8" fill="#93c5fd" text-anchor="middle">Consumers</text>
+
+  <!-- Node 3: Logistics / Transactions -->
+  <circle cx="300" cy="280" r="34" fill="#1e293b" stroke="#22c55e" stroke-width="2"/>
+  <text x="300" y="278" font-family="Plus Jakarta Sans, sans-serif" font-weight="700" font-size="11" fill="#ffffff" text-anchor="middle">Supply</text>
+  <text x="300" y="292" font-family="Plus Jakarta Sans, sans-serif" font-size="8" fill="#22c55e" text-anchor="middle">Chain Direct</text>
+
+  <!-- Top Banner Badge -->
+  <g transform="translate(180, 24)">
+    <rect width="240" height="32" rx="16" fill="#ffffff" fill-opacity="0.1" stroke="#3555c8" stroke-width="1"/>
+    <text x="120" y="21" font-family="Plus Jakarta Sans, sans-serif" font-weight="700" font-size="11" fill="#ffffff" text-anchor="middle">⭐ Bangkit Academy Capstone</text>
+  </g>
+</svg>

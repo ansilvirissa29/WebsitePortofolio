@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3555c8" />
+      <stop offset="100%" stop-color="#1e293b" />
+    </linearGradient>
+    <linearGradient id="accent-grad" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ff3131" />
+      <stop offset="100%" stop-color="#ff7b7b" />
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#0f172a" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+
+  <!-- Background Base -->
+  <rect width="500" height="500" fill="#f8fafc" rx="40"/>
+
+  <!-- Geometric Decorative Elements -->
+  <circle cx="430" cy="90" r="45" fill="none" stroke="#ff3131" stroke-width="4" stroke-dasharray="6,6" opacity="0.6"/>
+  <rect x="50" y="380" width="60" height="60" rx="14" fill="#3555c8" opacity="0.1" transform="rotate(25 80 410)"/>
+  <circle cx="90" cy="90" r="18" fill="#ff3131" opacity="0.8"/>
+  <path d="M 400,420 L 440,380 L 460,440 Z" fill="#3555c8" opacity="0.15"/>
+
+  <!-- Avatar Silhouette / Stylized Profile -->
+  <g filter="url(#shadow)">
+    <!-- Base Body Shape -->
+    <path d="M 120 460 C 120 370, 180 340, 250 340 C 320 340, 380 370, 380 460 Z" fill="url(#bg-grad)"/>
+    
+    <!-- Accent Collar/Tie -->
+    <path d="M 235 340 L 250 410 L 265 340 Z" fill="url(#accent-grad)"/>
+    <path d="M 210 340 L 250 380 L 290 340 Z" fill="#ffffff" opacity="0.2"/>
+
+    <!-- Head -->
+    <circle cx="250" cy="230" r="85" fill="#fbd38d"/>
+    
+    <!-- Hair -->
+    <path d="M 165 230 C 160 160, 210 140, 250 140 C 295 140, 340 160, 335 230 C 315 170, 280 160, 250 160 C 210 160, 180 185, 165 230 Z" fill="#1e293b"/>
+    <path d="M 175 180 C 210 140, 290 140, 325 180 C 310 160, 270 150, 250 150 C 220 150, 190 165, 175 180 Z" fill="#0f172a"/>
+
+    <!-- Smart Glasses (Computer Engineer / Tech Vibe) -->
+    <rect x="195" y="215" width="45" height="28" rx="8" fill="none" stroke="#3555c8" stroke-width="5"/>
+    <rect x="260" y="215" width="45" height="28" rx="8" fill="none" stroke="#3555c8" stroke-width="5"/>
+    <line x1="240" y1="228" x2="260" y2="228" stroke="#3555c8" stroke-width="5"/>
+    <line x1="175" y1="226" x2="195" y2="226" stroke="#3555c8" stroke-width="4"/>
+    <line x1="305" y1="226" x2="325" y2="226" stroke="#3555c8" stroke-width="4"/>
+    
+    <!-- Smile -->
+    <path d="M 230 270 Q 250 285 270 270" stroke="#c05621" stroke-width="3" fill="none" stroke-linecap="round"/>
+  </g>
+
+  <!-- Tech Floating Badges -->
+  <g transform="translate(60, 220)">
+    <rect width="105" height="38" rx="10" fill="#ffffff" filter="url(#shadow)"/>
+    <circle cx="20" cy="19" r="6" fill="#3555c8"/>
+    <text x="34" y="24" font-family="Plus Jakarta Sans, sans-serif" font-weight="700" font-size="12" fill="#0f172a">SQL & AI</text>
+  </g>
+
+  <g transform="translate(330, 270)">
+    <rect width="120" height="38" rx="10" fill="#ffffff" filter="url(#shadow)"/>
+    <circle cx="20" cy="19" r="6" fill="#ff3131"/>
+    <text x="34" y="24" font-family="Plus Jakarta Sans, sans-serif" font-weight="700" font-size="12" fill="#0f172a">UI/UX & Data</text>
+  </g>
+</svg>

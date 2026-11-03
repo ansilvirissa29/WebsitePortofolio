@@ -1,0 +1,273 @@
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@400..700&display=swap');
+
+:root {
+  /* Typography: Space Grotesk (Heading) & Instrument Sans (Body) */
+  --font-heading: 'Space Grotesk', sans-serif;
+  --font-body: 'Instrument Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  /* Resumly Framer Color Tokens */
+  --resumly-stone: #f1efed;
+  --resumly-white: #ffffff;
+  --resumly-obsidian: #0b0c0f;
+  --resumly-charcoal: #16171b;
+  --resumly-muted-dark: #54585c;
+  --resumly-muted-light: #b3b8b5;
+  --resumly-border-dark: #4e5155;
+  --resumly-border-light: #e2dfdc;
+  --resumly-accent: #fe812e;
+  --resumly-accent-deep: #f63c0c;
+  --resumly-blue: #3555c8;
+
+  --bg-main: #f1efed;
+  --bg-card: #ffffff;
+  --text-main: #0b0c0f;
+  --text-muted: #54585c;
+}
+
+html.dark {
+  --bg-main: #0b0c0f;
+  --bg-card: #16171b;
+  --text-main: #f1efed;
+  --text-muted: #b3b8b5;
+  color-scheme: dark;
+}
+
+/* Base Styles */
+html {
+  scroll-behavior: smooth;
+  font-family: var(--font-body);
+  color: var(--text-main);
+  background-color: var(--bg-main);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--bg-main);
+  color: var(--text-main);
+  overflow-x: hidden;
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6, .font-heading {
+  font-family: var(--font-heading);
+  letter-spacing: -0.03em;
+}
+
+.font-mono {
+  font-family: var(--font-mono);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #e5e2de;
+}
+html.dark ::-webkit-scrollbar-track {
+  background: #0b0c0f;
+}
+::-webkit-scrollbar-thumb {
+  background: #b3b8b5;
+  border-radius: 9999px;
+}
+html.dark ::-webkit-scrollbar-thumb {
+  background: #2d3036;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--resumly-accent);
+}
+
+/* Resumly Floating Pill Navbar with Signature Bottom Accent Rim */
+.resumly-pill-nav {
+  background: rgba(11, 12, 15, 0.9);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 2px solid var(--resumly-accent);
+  border-left: 2px solid var(--resumly-accent);
+  border-right: 2px solid var(--resumly-accent);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 20px 40px -15px rgba(11, 12, 15, 0.35);
+}
+
+/* Resumly Primary Gradient Button */
+.btn-resumly-primary {
+  background: linear-gradient(90deg, #f63c0c 0%, #fe812e 100%);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  box-shadow: 0 10px 25px -5px rgba(246, 60, 12, 0.4);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.btn-resumly-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 16px 32px -6px rgba(246, 60, 12, 0.55);
+  filter: brightness(1.05);
+}
+
+/* Resumly Dark Pill Button */
+.btn-resumly-dark {
+  background: #16171b;
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.btn-resumly-dark:hover {
+  background: #23252c;
+  border-color: var(--resumly-accent);
+  transform: translateY(-2px);
+}
+
+/* Resumly Hero Subtle Grid & Radial Glow */
+.resumly-hero-bg {
+  background-color: #0b0c0f;
+  background-image: 
+    radial-gradient(circle at 80% 20%, rgba(254, 129, 46, 0.14) 0%, transparent 45%),
+    radial-gradient(circle at 15% 85%, rgba(53, 85, 200, 0.14) 0%, transparent 45%),
+    linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 100% 100%, 100% 100%, 48px 48px, 48px 48px;
+}
+
+/* Marquee / Image Slider Animation (Resumly Hero Showcase) */
+@keyframes marquee-scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.resumly-marquee-track {
+  display: flex;
+  width: max-content;
+  animation: marquee-scroll 38s linear infinite;
+}
+
+.resumly-marquee-track:hover {
+  animation-play-state: paused;
+}
+
+/* Scroll Reveal Animations (Framer-like smooth spring feel) */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.85s cubic-bezier(0.16, 1, 0.3, 1), transform 0.85s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.delay-100 { transition-delay: 100ms; }
+.delay-200 { transition-delay: 200ms; }
+.delay-300 { transition-delay: 300ms; }
+
+/* Typing Cursor Effect */
+.typing-cursor {
+  display: inline-block;
+  width: 3px;
+  margin-left: 3px;
+  background-color: var(--resumly-accent);
+  animation: cursor-blink 0.9s infinite;
+}
+
+@keyframes cursor-blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+/* Resumly Cards & Interactive Hover */
+.resumly-card {
+  border-radius: 20px;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.resumly-card:hover {
+  transform: translateY(-6px);
+}
+
+/* Skills Chip */
+.skill-chip {
+  transition: all 0.25s ease;
+}
+
+.skill-chip:hover {
+  transform: translateY(-2px);
+  border-color: var(--resumly-accent);
+  color: #ffffff;
+  background-color: rgba(254, 129, 46, 0.25);
+}
+
+/* Dynamic Gallery Grids for Detail Experience */
+.gallery-container {
+  display: grid;
+  gap: 1.25rem;
+}
+
+.gallery-layout-1 {
+  grid-template-columns: 1fr;
+}
+.gallery-layout-1 .gallery-item {
+  height: 460px;
+}
+
+.gallery-layout-3 {
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 768px) {
+  .gallery-layout-3 {
+    grid-template-columns: 7fr 5fr;
+    grid-template-rows: 220px 220px;
+  }
+  .gallery-layout-3 .gallery-item-hero {
+    grid-row: span 2;
+    height: 100%;
+  }
+}
+
+.gallery-image-box {
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+  background-color: #16171b;
+}
+
+.gallery-image-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.65s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.gallery-image-box:hover img {
+  transform: scale(1.04);
+}
+
+.gallery-overlay {
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 40%, rgba(11, 12, 15, 0.85) 100%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.gallery-image-box:hover .gallery-overlay {
+  opacity: 1;
+}
+
+/* Lightbox Modal */
+.lightbox-modal {
+  backdrop-filter: blur(10px);
+  background-color: rgba(11, 12, 15, 0.92);
+}
+
+/* Horizontal Carousel Utilities */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}

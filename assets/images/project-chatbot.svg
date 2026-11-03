@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 360" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg-bot" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#091e3a" />
+      <stop offset="100%" stop-color="#1e293b" />
+    </linearGradient>
+  </defs>
+  <rect width="600" height="360" fill="url(#bg-bot)"/>
+
+  <!-- Background decorative dots -->
+  <g fill="#3555c8" opacity="0.15">
+    <circle cx="80" cy="60" r="3"/>
+    <circle cx="120" cy="60" r="3"/>
+    <circle cx="160" cy="60" r="3"/>
+    <circle cx="80" cy="100" r="3"/>
+    <circle cx="120" cy="100" r="3"/>
+    <circle cx="160" cy="100" r="3"/>
+  </g>
+
+  <!-- Telegram Message Box Container -->
+  <rect x="110" y="40" width="380" height="280" rx="18" fill="#0f172a" stroke="#3555c8" stroke-width="2" opacity="0.95"/>
+
+  <!-- Telegram Header Bar -->
+  <path d="M 110 58 A 18 18 0 0 1 128 40 L 472 40 A 18 18 0 0 1 490 58 L 490 95 L 110 95 Z" fill="#1e293b"/>
+  <circle cx="140" cy="68" r="14" fill="#3555c8"/>
+  <!-- Telegram plane icon -->
+  <path d="M 133 68 L 148 62 L 144 74 L 140 70 L 138 72 Z" fill="#ffffff"/>
+  <text x="165" y="67" font-family="Plus Jakarta Sans, sans-serif" font-size="12" font-weight="700" fill="#ffffff">BPS Data Assistant Bot</text>
+  <text x="165" y="80" font-family="Plus Jakarta Sans, sans-serif" font-size="10" fill="#22c55e">● Online 24/7 Service</text>
+
+  <!-- Chat Bubbles -->
+  <!-- User query -->
+  <rect x="250" y="115" width="220" height="42" rx="12" fill="#3555c8"/>
+  <text x="265" y="140" font-family="Plus Jakarta Sans, sans-serif" font-size="11" fill="#ffffff">Berapa data inflasi BPS terbaru?</text>
+
+  <!-- Bot response with SQL / Data -->
+  <rect x="130" y="170" width="310" height="85" rx="12" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+  <text x="145" y="193" font-family="Plus Jakarta Sans, sans-serif" font-size="11" font-weight="600" fill="#ff3131">🤖 Hasil Query Data Otomatis BPS:</text>
+  <text x="145" y="213" font-family="JetBrains Mono, monospace" font-size="10" fill="#94a3b8">• Inflasi Tahunan: 2.58%</text>
+  <text x="145" y="230" font-family="JetBrains Mono, monospace" font-size="10" fill="#94a3b8">• Status Verifikasi: Terbit & Valid</text>
+  <text x="145" y="247" font-family="Plus Jakarta Sans, sans-serif" font-size="9" fill="#64748b">Data berhasil diambil dalam 0.42 detik</text>
+
+  <!-- Input simulator -->
+  <rect x="130" y="270" width="340" height="35" rx="8" fill="#1e293b"/>
+  <text x="145" y="292" font-family="Plus Jakarta Sans, sans-serif" font-size="11" fill="#64748b">Ketik nama indikator statistik...</text>
+  <circle cx="450" cy="287" r="10" fill="#3555c8"/>
+  <path d="M 447 287 L 453 283 L 453 291 Z" fill="#ffffff"/>
+</svg>

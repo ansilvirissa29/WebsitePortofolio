@@ -1,0 +1,1415 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rahmat Ferdiansyah | Portfolio — Computer Engineer, Data Analyst & Creative Developer</title>
+  
+  <meta name="description" content="Portfolio pribadi Rahmat Ferdiansyah - Sarjana Teknik Komputer USK dengan keahlian Data Analysis, Data Science, AI, Software Development, dan 2+ tahun pengalaman industri kreatif.">
+  <meta name="author" content="Rahmat Ferdiansyah">
+  
+  <!-- Google Fonts: Space Grotesk (Heading) & Instrument Sans (Body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@400..700&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            resumly: {
+              stone: '#f1efed',
+              obsidian: '#0b0c0f',
+              charcoal: '#16171b',
+              muted: '#54585c',
+              silver: '#b3b8b5',
+              border: '#4e5155',
+              accent: '#fe812e',
+              flame: '#f63c0c',
+              blue: '#3555c8'
+            }
+          },
+          fontFamily: {
+            sans: ['Instrument Sans', 'system-ui', 'sans-serif'],
+            heading: ['Space Grotesk', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace']
+          }
+        }
+      }
+    }
+  </script>
+  <script>
+    if (localStorage.getItem('theme-v2') === 'dark') {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+    }
+  </script>
+
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Custom CSS (Resumly Edition) -->
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body class="bg-[#f1efed] dark:bg-[#0b0c0f] text-[#0b0c0f] dark:text-[#f1efed] antialiased selection:bg-[#fe812e] selection:text-white relative transition-colors duration-300">
+
+  <!-- ======================================================================== -->
+  <!-- 1. RESUMLY FLOATING PILL NAVBAR                                          -->
+  <!-- ======================================================================== -->
+  <header id="navbar" class="fixed top-0 left-0 right-0 z-50 px-3 sm:px-6 pt-3 sm:pt-4 pointer-events-none">
+    <div class="max-w-[960px] mx-auto pointer-events-auto">
+      <div class="resumly-pill-nav rounded-2xl sm:rounded-full px-4 sm:px-6 py-3 flex items-center justify-between transition-all duration-300">
+        
+        <!-- Brand Logo -->
+        <a href="#hero" class="flex items-center space-x-2.5 group">
+          <div class="w-9 h-9 rounded-full bg-gradient-to-r from-[#f63c0c] to-[#fe812e] text-white flex items-center justify-center font-heading font-bold text-sm shadow-md">
+            RF
+          </div>
+          <span class="font-heading font-bold text-white tracking-tight text-lg group-hover:text-[#fe812e] transition-colors">
+            Rahmat<span class="text-[#fe812e]">.</span>
+          </span>
+        </a>
+
+        <!-- Desktop Navigation Menu (Resumly Centered Menu List) -->
+        <nav class="hidden md:flex items-center space-x-1 lg:space-x-2">
+          <a href="#about" class="nav-link px-3.5 py-1.5 rounded-full text-xs lg:text-sm font-medium text-[#b3b8b5] hover:text-white hover:bg-white/10 transition-all">About</a>
+          <a href="#skills" class="nav-link px-3.5 py-1.5 rounded-full text-xs lg:text-sm font-medium text-[#b3b8b5] hover:text-white hover:bg-white/10 transition-all">Skills</a>
+          <a href="#experience" class="nav-link px-3.5 py-1.5 rounded-full text-xs lg:text-sm font-medium text-[#b3b8b5] hover:text-white hover:bg-white/10 transition-all">Work Experience</a>
+          <a href="#organization" class="nav-link px-3.5 py-1.5 rounded-full text-xs lg:text-sm font-medium text-[#b3b8b5] hover:text-white hover:bg-white/10 transition-all">Organization</a>
+          <a href="#certifications" class="nav-link px-3.5 py-1.5 rounded-full text-xs lg:text-sm font-medium text-[#b3b8b5] hover:text-white hover:bg-white/10 transition-all">Certifications</a>
+        </nav>
+
+        <!-- Right Action Button & Theme Toggle -->
+        <div class="hidden md:flex items-center space-x-2.5">
+          <button type="button" aria-label="Ganti Mode Gelap / Terang" title="Toggle Dark / Light Mode" class="theme-toggle-btn p-2 rounded-full border border-white/15 bg-white/5 text-[#b3b8b5] hover:text-white hover:border-[#fe812e] transition-all focus:outline-none">
+            <i data-lucide="moon" class="w-4 h-4 block dark:hidden"></i>
+            <i data-lucide="sun" class="w-4 h-4 hidden dark:block text-[#fe812e]"></i>
+          </button>
+
+          <a href="#contact" class="btn-resumly-primary inline-flex items-center justify-center px-5 py-2 rounded-full text-xs lg:text-sm font-semibold text-white">
+            <span>Let's Connect</span>
+            <i data-lucide="arrow-up-right" class="w-4 h-4 ml-1"></i>
+          </a>
+        </div>
+
+        <!-- Mobile Menu Toggle Button -->
+        <div class="flex md:hidden items-center space-x-2">
+          <button type="button" aria-label="Ganti Mode Gelap / Terang" class="theme-toggle-btn p-2 rounded-full border border-white/15 bg-white/5 text-[#b3b8b5] hover:text-white focus:outline-none">
+            <i data-lucide="moon" class="w-4 h-4 block dark:hidden"></i>
+            <i data-lucide="sun" class="w-4 h-4 hidden dark:block text-[#fe812e]"></i>
+          </button>
+          <button id="mobile-menu-btn" type="button" aria-expanded="false" class="p-2 rounded-full text-white hover:bg-white/10 focus:outline-none" aria-label="Toggle Menu">
+            <i data-lucide="menu" class="w-5 h-5 icon-menu"></i>
+            <i data-lucide="x" class="w-5 h-5 icon-close hidden"></i>
+          </button>
+        </div>
+
+      </div>
+
+      <!-- Mobile Dropdown Menu -->
+      <div id="mobile-menu" class="hidden md:hidden mt-2 rounded-2xl bg-[#0b0c0f]/95 backdrop-blur-xl border border-[#fe812e]/60 px-4 pt-3 pb-5 space-y-1.5 shadow-2xl text-white">
+        <a href="#about" class="mobile-nav-link block px-3.5 py-2.5 rounded-xl text-sm font-medium text-[#b3b8b5] hover:text-white hover:bg-white/10">About</a>
+        <a href="#skills" class="mobile-nav-link block px-3.5 py-2.5 rounded-xl text-sm font-medium text-[#b3b8b5] hover:text-white hover:bg-white/10">Skills</a>
+        <a href="#experience" class="mobile-nav-link block px-3.5 py-2.5 rounded-xl text-sm font-medium text-[#b3b8b5] hover:text-white hover:bg-white/10">Work Experience</a>
+        <a href="#organization" class="mobile-nav-link block px-3.5 py-2.5 rounded-xl text-sm font-medium text-[#b3b8b5] hover:text-white hover:bg-white/10">Organization</a>
+        <a href="#certifications" class="mobile-nav-link block px-3.5 py-2.5 rounded-xl text-sm font-medium text-[#b3b8b5] hover:text-white hover:bg-white/10">Certifications</a>
+        <div class="pt-3 border-t border-white/10">
+          <a href="#contact" class="mobile-nav-link btn-resumly-primary flex items-center justify-center w-full px-4 py-3 rounded-full font-semibold text-sm text-white">
+            <span>Let's Connect</span>
+            <i data-lucide="arrow-up-right" class="w-4 h-4 ml-1"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ======================================================================== -->
+    <!-- 2. RESUMLY HERO SECTION + VISUAL SHOWCASE SLIDER                         -->
+    <!-- ======================================================================== -->
+    <section id="hero" class="resumly-hero-bg text-white pt-32 sm:pt-40 pb-16 sm:pb-24 relative overflow-hidden rounded-b-[28px] sm:rounded-b-[40px] shadow-2xl">
+      <div class="max-w-[1200px] mx-auto px-4 sm:px-8 w-full">
+        
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-10 items-center">
+          
+          <!-- Hero Left Content (Resumly Bold Editorial Display) -->
+          <div class="lg:col-span-7 space-y-7 text-center lg:text-left reveal">
+            
+            <!-- Availability Pill Badge ("Freelance available globally." style) -->
+            <div class="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-[#16171b] border border-white/15 text-[#b3b8b5] text-xs sm:text-sm font-medium">
+              <span class="relative flex h-2.5 w-2.5">
+                <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#fe812e] opacity-75"></span>
+                <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-[#fe812e]"></span>
+              </span>
+              <span>Open for Data &amp; Engineering Opportunities</span>
+            </div>
+
+            <!-- Main Display Title -->
+            <div class="space-y-3">
+              <p class="text-base sm:text-lg font-medium text-[#b3b8b5] tracking-wide">Halo, Saya</p>
+              <h1 class="font-heading text-4xl sm:text-6xl lg:text-[68px] font-bold text-white tracking-tight leading-[1.05]">
+                Rahmat <span class="bg-gradient-to-r from-[#f63c0c] to-[#fe812e] bg-clip-text text-transparent">Ferdiansyah</span>
+              </h1>
+            </div>
+
+            <!-- Typing Effect Role -->
+            <div class="h-10 flex items-center justify-center lg:justify-start text-xl sm:text-2xl lg:text-3xl font-heading font-semibold text-white/90">
+              <span class="mr-2 text-[#b3b8b5] font-normal">Spesialisasi:</span>
+              <span id="typing-text" class="text-[#fe812e]"></span>
+              <span class="typing-cursor h-6 sm:h-7"></span>
+            </div>
+
+            <!-- Brief Tagline -->
+            <p class="text-base sm:text-lg text-[#b3b8b5] max-w-2xl mx-auto lg:mx-0 leading-relaxed">
+              Lulusan <span class="text-white font-semibold">Teknik Komputer Universitas Syiah Kuala</span> yang memadukan keahlian analitis data, kecerdasan buatan (AI), software development, dan 2+ tahun pengalaman profesional di industri kreatif.
+            </p>
+
+            <!-- CTA Buttons Row (Resumly Pill Buttons) -->
+            <div class="flex flex-wrap items-center justify-center lg:justify-start gap-3.5 pt-2">
+              
+              <!-- Download CV Button -->
+              <a href="https://drive.google.com/file/d/1LiED9JHRAhdQIbhvRlp9ZfeuqX49eR9N/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="btn-resumly-primary inline-flex items-center justify-center px-7 py-4 rounded-full font-semibold text-sm sm:text-base text-white group">
+                <i data-lucide="download" class="w-4 h-4 mr-2 group-hover:animate-bounce"></i>
+                <span>Download CV</span>
+              </a>
+
+              <!-- Creative Portofolio Button (No icon, exact label requested) -->
+              <a href="https://drive.google.com/drive/folders/1aG9casKS1refUGdLfvJS_s2US_g6BGkY" target="_blank" rel="noopener noreferrer" class="btn-resumly-dark inline-flex items-center justify-center px-7 py-4 rounded-full font-semibold text-sm sm:text-base text-white">
+                <span>Creative Portofolio</span>
+              </a>
+
+              <!-- Contact Me Button -->
+              <a href="#contact" class="btn-resumly-dark inline-flex items-center justify-center px-6 py-4 rounded-full font-semibold text-sm sm:text-base text-[#b3b8b5] hover:text-white">
+                <i data-lucide="mail" class="w-4 h-4 mr-2 text-[#fe812e]"></i>
+                <span>Contact Me</span>
+              </a>
+            </div>
+
+            <!-- Resumly Trust / Quick Contact Strip -->
+            <div class="pt-4 border-t border-white/10 flex flex-wrap items-center justify-center lg:justify-start gap-x-6 gap-y-3 text-xs sm:text-sm text-[#b3b8b5]">
+              <a href="mailto:rahmat29ferdiansyah@gmail.com" class="flex items-center gap-2 hover:text-[#fe812e] transition-colors">
+                <i data-lucide="mail" class="w-4 h-4 text-[#fe812e]"></i>
+                <span>rahmat29ferdiansyah@gmail.com</span>
+              </a>
+              <a href="https://wa.me/6287796037024" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 hover:text-[#fe812e] transition-colors">
+                <i data-lucide="phone" class="w-4 h-4 text-[#22c55e]"></i>
+                <span>0877-9603-7024</span>
+              </a>
+              <span class="flex items-center gap-2">
+                <i data-lucide="map-pin" class="w-4 h-4 text-[#fe812e]"></i>
+                <span>Jakarta Timur, DKI Jakarta</span>
+              </span>
+            </div>
+
+          </div>
+
+          <!-- Hero Right Visual / Editorial Portrait Card -->
+          <div class="lg:col-span-5 flex justify-center reveal delay-200">
+            <div class="relative w-72 sm:w-80 md:w-[370px]">
+              
+              <!-- Resumly Frame Container -->
+              <div class="relative rounded-[24px] overflow-hidden bg-[#16171b] p-3 border border-white/15 shadow-2xl group">
+                <div class="w-full aspect-[4/5] rounded-[18px] overflow-hidden bg-[#0b0c0f] relative">
+                  <img src="../assets/images/hero.jpg" 
+                       alt="Rahmat Ferdiansyah - Computer Engineer & Data Analyst" 
+                       class="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105">
+                  
+                  <!-- Bottom Gradient Overlay -->
+                  <div class="absolute inset-0 bg-gradient-to-t from-[#0b0c0f]/90 via-[#0b0c0f]/20 to-transparent"></div>
+                  
+                  <!-- In-photo Editorial Badge -->
+                  <div class="absolute bottom-4 left-4 right-4 flex items-end justify-between text-white">
+                    <div>
+                      <p class="text-[11px] uppercase tracking-widest font-mono text-[#fe812e] font-semibold">Sarjana Teknik Komputer</p>
+                      <p class="font-heading font-bold text-base sm:text-lg">Universitas Syiah Kuala</p>
+                    </div>
+                    <span class="w-9 h-9 rounded-full bg-white/10 backdrop-blur-md border border-white/20 flex items-center justify-center">
+                      <i data-lucide="sparkles" class="w-4 h-4 text-[#fe812e]"></i>
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- Resumly Hero Image Marquee Strip (Showcasing Real Documentation) -->
+      <div class="mt-16 pt-10 border-t border-white/10 overflow-hidden">
+        <div class="resumly-marquee-track gap-5 px-4">
+          <!-- Set 1 -->
+          <div class="flex items-center gap-5">
+            <div class="w-64 h-40 rounded-[16px] overflow-hidden border border-white/10 relative shrink-0 group">
+              <img src="../assets/images/Mutsu.jpg" alt="Museum Tsunami Aceh" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-transparent flex items-end p-3">
+                <span class="text-xs font-medium text-white">UPTD Museum Tsunami Aceh</span>
+              </div>
+            </div>
+            <div class="w-64 h-40 rounded-[16px] overflow-hidden border border-white/10 relative shrink-0 group">
+              <img src="../assets/images/Dindinshop2.JPG" alt="Dindinshop Warehouse" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-transparent flex items-end p-3">
+                <span class="text-xs font-medium text-white">Dindinshop Logistics &amp; Inventory</span>
+              </div>
+            </div>
+            <div class="w-64 h-40 rounded-[16px] overflow-hidden border border-white/10 relative shrink-0 group">
+              <img src="../assets/images/Dindinshop3.JPG" alt="Dindinshop Creative" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-transparent flex items-end p-3">
+                <span class="text-xs font-medium text-white">Dindinshop Visual &amp; Branding</span>
+              </div>
+            </div>
+            <div class="w-64 h-40 rounded-[16px] overflow-hidden border border-white/10 relative shrink-0 group">
+              <img src="../assets/images/bps.png" alt="BPS Aceh" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-transparent flex items-end p-3">
+                <span class="text-xs font-medium text-white">Badan Pusat Statistik (BPS) Aceh</span>
+              </div>
+            </div>
+            <div class="w-64 h-40 rounded-[16px] overflow-hidden border border-white/10 relative shrink-0 group">
+              <img src="../assets/images/AICONNECT.JPG" alt="Telkom AI Connect" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-transparent flex items-end p-3">
+                <span class="text-xs font-medium text-white">Guest Speaker — Telkom AI Connect</span>
+              </div>
+            </div>
+            <div class="w-64 h-40 rounded-[16px] overflow-hidden border border-white/10 relative shrink-0 group">
+              <img src="../assets/images/Bangkit.png" alt="Bangkit Academy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-transparent flex items-end p-3">
+                <span class="text-xs font-medium text-white">Bangkit Academy Cohort</span>
+              </div>
+            </div>
+          </div>
+          <!-- Set 2 (Duplicate for seamless loop) -->
+          <div class="flex items-center gap-5" aria-hidden="true">
+            <div class="w-64 h-40 rounded-[16px] overflow-hidden border border-white/10 relative shrink-0 group">
+              <img src="../assets/images/Mutsu.jpg" alt="Museum Tsunami Aceh" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-transparent flex items-end p-3">
+                <span class="text-xs font-medium text-white">UPTD Museum Tsunami Aceh</span>
+              </div>
+            </div>
+            <div class="w-64 h-40 rounded-[16px] overflow-hidden border border-white/10 relative shrink-0 group">
+              <img src="../assets/images/Dindinshop2.JPG" alt="Dindinshop Warehouse" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-transparent flex items-end p-3">
+                <span class="text-xs font-medium text-white">Dindinshop Logistics &amp; Inventory</span>
+              </div>
+            </div>
+            <div class="w-64 h-40 rounded-[16px] overflow-hidden border border-white/10 relative shrink-0 group">
+              <img src="../assets/images/Dindinshop3.JPG" alt="Dindinshop Creative" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-transparent flex items-end p-3">
+                <span class="text-xs font-medium text-white">Dindinshop Visual &amp; Branding</span>
+              </div>
+            </div>
+            <div class="w-64 h-40 rounded-[16px] overflow-hidden border border-white/10 relative shrink-0 group">
+              <img src="../assets/images/bps.png" alt="BPS Aceh" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-transparent flex items-end p-3">
+                <span class="text-xs font-medium text-white">Badan Pusat Statistik (BPS) Aceh</span>
+              </div>
+            </div>
+            <div class="w-64 h-40 rounded-[16px] overflow-hidden border border-white/10 relative shrink-0 group">
+              <img src="../assets/images/AICONNECT.JPG" alt="Telkom AI Connect" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-transparent flex items-end p-3">
+                <span class="text-xs font-medium text-white">Guest Speaker — Telkom AI Connect</span>
+              </div>
+            </div>
+            <div class="w-64 h-40 rounded-[16px] overflow-hidden border border-white/10 relative shrink-0 group">
+              <img src="../assets/images/Bangkit.png" alt="Bangkit Academy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-transparent flex items-end p-3">
+                <span class="text-xs font-medium text-white">Bangkit Academy Cohort</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ======================================================================== -->
+    <!-- 3. PROFESSIONAL SUMMARY / ABOUT ME (RESUMLY EDITORIAL SPLIT + COUNTERS)  -->
+    <!-- ======================================================================== -->
+    <section id="about" class="py-20 sm:py-28 relative">
+      <div class="max-w-[1200px] mx-auto px-4 sm:px-8">
+        
+        <!-- Section Title (Clean, no icon/subtitle as requested) -->
+        <div class="mb-12 sm:mb-16 reveal">
+          <h2 class="font-heading text-3xl sm:text-5xl font-bold text-[#0b0c0f] dark:text-white tracking-tight">
+            Professional Summary
+          </h2>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-start">
+          
+          <!-- Narrative Summary (No bolding in description paragraphs) -->
+          <div class="lg:col-span-7 space-y-5 text-[#54585c] dark:text-[#b3b8b5] text-base sm:text-lg leading-relaxed reveal">
+            <p>
+              A Computer Engineering graduate from Syiah Kuala University with a specialization and deep interest in Data Analysis, Data Science, Artificial Intelligence and Software Development.
+            </p>
+            <p>
+              Backed by two years of professional experience in the creative industry (Graphic Design, Video Editing, and Social Media Optimization), which honed skills in data visualization, cross-departmental communication, and creative problem-solving.
+            </p>
+            <p>
+              Possesses a proven track record in processing research data using SQL and Python, building automation solutions, and managing data-driven logistics operations. Ready to contribute to data-driven decision-making and the development of innovative technology products.
+            </p>
+
+            <!-- Focus Area & Creative Skill Cards -->
+            <div class="pt-4 grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div class="p-5 rounded-[20px] bg-white dark:bg-[#16171b] border border-black/5 dark:border-white/10 shadow-sm">
+                <p class="text-xs font-mono text-[#fe812e] font-semibold uppercase tracking-wider">Focus Area</p>
+                <p class="font-heading text-lg font-bold text-[#0b0c0f] dark:text-white mt-1">Data and Software Developer</p>
+              </div>
+              <div class="p-5 rounded-[20px] bg-white dark:bg-[#16171b] border border-black/5 dark:border-white/10 shadow-sm">
+                <p class="text-xs font-mono text-[#fe812e] font-semibold uppercase tracking-wider">Creative Skill</p>
+                <p class="font-heading text-lg font-bold text-[#0b0c0f] dark:text-white mt-1">Visual &amp; Branding</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Personal Data Card (Resumly White/Dark Card with 20px radius) -->
+          <div class="lg:col-span-5 reveal delay-200">
+            <div class="bg-white dark:bg-[#16171b] rounded-[20px] p-6 sm:p-8 border border-black/5 dark:border-white/10 shadow-sm relative overflow-hidden">
+              
+              <h3 class="font-heading text-lg font-bold text-[#0b0c0f] dark:text-white mb-6 flex items-center gap-2.5">
+                <span class="w-2.5 h-2.5 rounded-full bg-[#fe812e]"></span>
+                <span>Data Diri &amp; Kualifikasi</span>
+              </h3>
+
+              <div class="space-y-4 text-sm">
+                <div class="flex items-start justify-between pb-3 border-b border-black/10 dark:border-white/10">
+                  <span class="text-[#54585c] dark:text-[#b3b8b5] font-medium">Nama Lengkap</span>
+                  <span class="font-bold text-[#0b0c0f] dark:text-white text-right">Rahmat Ferdiansyah</span>
+                </div>
+
+                <div class="flex items-start justify-between pb-3 border-b border-black/10 dark:border-white/10">
+                  <span class="text-[#54585c] dark:text-[#b3b8b5] font-medium">Domisili</span>
+                  <span class="font-semibold text-[#0b0c0f] dark:text-white text-right">Jakarta Timur, DKI Jakarta</span>
+                </div>
+
+                <div class="flex items-start justify-between pb-3 border-b border-black/10 dark:border-white/10">
+                  <span class="text-[#54585c] dark:text-[#b3b8b5] font-medium">Pendidikan</span>
+                  <span class="font-semibold text-[#0b0c0f] dark:text-white text-right">Sarjana Teknik Komputer (S.T.)</span>
+                </div>
+
+                <div class="flex items-start justify-between pb-3 border-b border-black/10 dark:border-white/10">
+                  <span class="text-[#54585c] dark:text-[#b3b8b5] font-medium">Universitas</span>
+                  <span class="font-semibold text-[#0b0c0f] dark:text-white text-right">Universitas Syiah Kuala</span>
+                </div>
+
+                <div class="flex items-start justify-between pb-3 border-b border-black/10 dark:border-white/10">
+                  <span class="text-[#54585c] dark:text-[#b3b8b5] font-medium">Nomor WhatsApp</span>
+                  <a href="https://wa.me/6287796037024" target="_blank" class="font-bold text-[#fe812e] hover:underline transition-colors text-right">
+                    087796037024
+                  </a>
+                </div>
+
+                <div class="flex items-start justify-between">
+                  <span class="text-[#54585c] dark:text-[#b3b8b5] font-medium">Email</span>
+                  <a href="mailto:rahmat29ferdiansyah@gmail.com" class="font-bold text-[#fe812e] hover:underline transition-colors text-right break-all">
+                    rahmat29ferdiansyah@gmail.com
+                  </a>
+                </div>
+              </div>
+
+              <!-- Quick action banner -->
+              <div class="mt-6 pt-4 border-t border-black/10 dark:border-white/10 flex items-center justify-between">
+                <span class="text-xs font-mono text-[#54585c] dark:text-[#b3b8b5]">Ready to relocate / remote</span>
+                <span class="inline-flex items-center text-xs font-bold text-[#fe812e]">
+                  Available Now
+                  <i data-lucide="chevron-right" class="w-3.5 h-3.5 ml-0.5"></i>
+                </span>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Resumly Counter Section (Dark Rounded Metric Cards from Resumly /about) -->
+        <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 mt-12 reveal">
+          <div class="bg-[#16171b] text-white rounded-[20px] p-6 sm:p-7 border border-white/10">
+            <p class="font-heading text-3xl sm:text-4xl font-bold text-[#fe812e]">2+ Yrs</p>
+            <p class="text-xs sm:text-sm text-[#b3b8b5] mt-2">Creative &amp; Visual Media Experience</p>
+          </div>
+          <div class="bg-[#16171b] text-white rounded-[20px] p-6 sm:p-7 border border-white/10">
+            <p class="font-heading text-3xl sm:text-4xl font-bold text-white">4 Roles</p>
+            <p class="text-xs sm:text-sm text-[#b3b8b5] mt-2">Data, IT, Logistics &amp; Creative Track</p>
+          </div>
+          <div class="bg-[#16171b] text-white rounded-[20px] p-6 sm:p-7 border border-white/10">
+            <p class="font-heading text-3xl sm:text-4xl font-bold text-[#fe812e]">7+</p>
+            <p class="text-xs sm:text-sm text-[#b3b8b5] mt-2">Verified Licenses &amp; Certifications</p>
+          </div>
+          <div class="bg-[#16171b] text-white rounded-[20px] p-6 sm:p-7 border border-white/10">
+            <p class="font-heading text-3xl sm:text-4xl font-bold text-white">S.T.</p>
+            <p class="text-xs sm:text-sm text-[#b3b8b5] mt-2">Computer Engineering — USK</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ======================================================================== -->
+    <!-- 4. TECHNICAL & PROFESSIONAL SKILLS (RESUMLY DARK CONTAINER + CAROUSEL)   -->
+    <!-- ======================================================================== -->
+    <section id="skills" class="px-3 sm:px-6 lg:px-10 py-6">
+      <div class="bg-[#0b0c0f] dark:bg-[#16171b] text-white rounded-[28px] sm:rounded-[36px] py-16 sm:py-24 px-4 sm:px-8 lg:px-12 max-w-[1320px] mx-auto border border-white/10 shadow-2xl">
+        <div class="max-w-[1200px] mx-auto">
+          
+          <!-- Section Header (No subtitle as requested) -->
+          <div class="flex flex-col sm:flex-row sm:items-end justify-between mb-10 gap-4 reveal">
+            <div>
+              <span class="text-xs font-mono uppercase tracking-widest text-[#fe812e] font-semibold block mb-2">// Competency Matrix</span>
+              <h2 class="font-heading text-3xl sm:text-5xl font-bold text-white tracking-tight">
+                Technical &amp; Professional Skills
+              </h2>
+            </div>
+          </div>
+
+          <!-- Skills Carousel with Floating Side Arrows -->
+          <div class="relative group/carousel">
+            <!-- Floating Prev Button (Left) -->
+            <button type="button" onclick="scrollCarousel('skills-carousel', -1)" aria-label="Slide sebelumnya" class="absolute -left-2 sm:-left-5 top-1/2 -translate-y-1/2 z-20 w-11 h-11 sm:w-12 sm:h-12 rounded-full bg-white text-[#0b0c0f] shadow-xl hover:bg-[#fe812e] hover:text-white flex items-center justify-center border border-black/10 hover:scale-110 active:scale-95 transition-all focus:outline-none">
+              <i data-lucide="chevron-left" class="w-6 h-6"></i>
+            </button>
+
+            <!-- Carousel Element (Equal box dimensions with bottom shadow on image cards) -->
+            <div id="skills-carousel" class="flex overflow-x-auto snap-x snap-mandatory scroll-smooth no-scrollbar gap-6 pb-4 pt-2 px-1 sm:px-0">
+              
+              <!-- Category 1: Data Analytics & Data Science (Data.jpg) -->
+              <div class="w-[85vw] sm:w-[360px] md:w-[390px] min-h-[420px] flex-shrink-0 snap-start relative overflow-hidden rounded-[20px] p-6 sm:p-7 border border-white/15 shadow-xl hover:border-[#fe812e] transition-all flex flex-col justify-between group">
+                <div class="absolute inset-0 z-0 overflow-hidden">
+                  <img src="../assets/images/Data.jpg" alt="Data Analytics & Data Science" class="w-full h-full object-cover object-center transform group-hover:scale-105 transition-transform duration-700 ease-out" loading="lazy">
+                  <div class="absolute inset-0 bg-gradient-to-t from-[#0b0c0f]/95 via-[#0b0c0f]/70 to-[#0b0c0f]/35"></div>
+                </div>
+
+                <div class="relative z-10 text-white flex flex-col justify-between h-full">
+                  <div>
+                    <div class="flex items-center space-x-3 mb-6">
+                      <div class="w-12 h-12 rounded-2xl bg-white/10 backdrop-blur-md text-[#fe812e] border border-white/15 flex items-center justify-center">
+                        <i data-lucide="database" class="w-6 h-6"></i>
+                      </div>
+                      <div>
+                        <h3 class="text-lg font-bold text-white leading-snug font-heading">Data Analytics &amp; Data Science</h3>
+                        <p class="text-xs font-mono text-[#b3b8b5]">Statistical Analysis &amp; Modeling</p>
+                      </div>
+                    </div>
+                    
+                    <div class="flex flex-wrap gap-2">
+                      <span class="skill-chip px-3 py-1.5 rounded-full text-xs font-semibold bg-black/60 text-white border border-white/20 backdrop-blur-md">SQL</span>
+                      <span class="skill-chip px-3 py-1.5 rounded-full text-xs font-semibold bg-black/60 text-white border border-white/20 backdrop-blur-md">Python</span>
+                      <span class="skill-chip px-3 py-1.5 rounded-full text-xs font-semibold bg-black/60 text-white border border-white/20 backdrop-blur-md">Data Cleaning</span>
+                      <span class="skill-chip px-3 py-1.5 rounded-full text-xs font-semibold bg-black/60 text-white border border-white/20 backdrop-blur-md">Data Processing</span>
+                      <span class="skill-chip px-3 py-1.5 rounded-full text-xs font-semibold bg-black/60 text-white border border-white/20 backdrop-blur-md">Machine Learning</span>
+                      <span class="skill-chip px-3 py-1.5 rounded-full text-xs font-semibold bg-black/60 text-white border border-white/20 backdrop-blur-md">Predictive Modeling</span>
+                      <span class="skill-chip px-3 py-1.5 rounded-full text-xs font-semibold bg-black/60 text-white border border-white/20 backdrop-blur-md">Statistical Analysis</span>
+                      <span class="skill-chip px-3 py-1.5 rounded-full text-xs font-semibold bg-black/60 text-white border border-white/20 backdrop-blur-md">Data Validation</span>
+                    </div>
+                  </div>
+                  <div class="pt-4 mt-6 border-t border-white/20 flex items-center justify-between text-xs text-[#b3b8b5] font-mono">
+                    <span>8 Core Competencies</span>
+                    <span class="text-[#fe812e] font-bold">Advanced</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Category 2: Analysis & BI Tools (Analyst.jpg) -->
+              <div class="w-[85vw] sm:w-[360px] md:w-[390px] min-h-[420px] flex-shrink-0 snap-start relative overflow-hidden rounded-[20px] p-6 sm:p-7 border border-white/15 shadow-xl hover:border-[#fe812e] transition-all flex flex-col justify-between group">
+                <div class="absolute inset-0 z-0 overflow-hidden">
+                  <img src="../assets/images/Analyst.jpg" alt="Analysis & BI Tools" class="w-full h-full object-cover object-center transform group-hover:scale-105 transition-transform duration-700 ease-out" loading="lazy">
+                  <div class="absolute inset-0 bg-gradient-to-t from-[#0b0c0f]/95 via-[#0b0c0f]/70 to-[#0b0c0f]/35"></div>
+                </div>
+
+                <div class="relative z-10 text-white flex flex-col justify-between h-full">
+                  <div>
+                    <div class="flex items-center space-x-3 mb-6">
+                      <div class="w-12 h-12 rounded-2xl bg-white/10 backdrop-blur-md text-[#fe812e] border border-white/15 flex items-center justify-center">
+                        <i data-lucide="bar-chart-3" class="w-6 h-6"></i>
+                      </div>
+                      <div>
+                        <h3 class="text-lg font-bold text-white leading-snug font-heading">Analysis &amp; BI Tools</h3>
+                        <p class="text-xs font-mono text-[#b3b8b5]">Visualization &amp; Data Reporting</p>
+                      </div>
+                    </div>
+                    
+                    <div class="flex flex-wrap gap-2">
+                      <span class="skill-chip px-3 py-1.5 rounded-full text-xs font-semibold bg-black/60 text-white border border-white/20 backdrop-blur-md">Power BI</span>
+                      <span class="skill-chip px-3 py-1.5 rounded-full text-xs font-semibold bg-black/60 text-white border border-white/20 backdrop-blur-md">Tableau</span>
+                      <span class="skill-chip px-3 py-1.5 rounded-full text-xs font-semibold bg-black/60 text-white border border-white/20 backdrop-blur-md">Microsoft Excel (Advanced)</span>
+                      <span class="skill-chip px-3 py-1.5 rounded-full text-xs font-semibold bg-black/60 text-white border border-white/20 backdrop-blur-md">Power Query &amp; Pivot</span>
+                      <span class="skill-chip px-3 py-1.5 rounded-full text-xs font-semibold bg-black/60 text-white border border-white/20 backdrop-blur-md">Jupyter Notebook</span>
+                      <span class="skill-chip px-3 py-1.5 rounded-full text-xs font-semibold bg-black/60 text-white border border-white/20 backdrop-blur-md">Business Dashboards</span>
+                    </div>
+                  </div>
+                  <div class="pt-4 mt-6 border-t border-white/20 flex items-center justify-between text-xs text-[#b3b8b5] font-mono">
+                    <span>6 Core Tools</span>
+                    <span class="text-[#fe812e] font-bold">Proficient</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Category 3: Creative & Visual Media (Design.jpg) -->
+              <div class="w-[85vw] sm:w-[360px] md:w-[390px] min-h-[420px] flex-shrink-0 snap-start relative overflow-hidden rounded-[20px] p-6 sm:p-7 border border-white/15 shadow-xl hover:border-[#fe812e] transition-all flex flex-col justify-between group">
+                <div class="absolute inset-0 z-0 overflow-hidden">
+                  <img src="../assets/images/Design.jpg" alt="Creative & Visual Media" class="w-full h-full object-cover object-center transform group-hover:scale-105 transition-transform duration-700 ease-out" loading="lazy">
+                  <div class="absolute inset-0 bg-gradient-to-t from-[#0b0c0f]/95 via-[#0b0c0f]/70 to-[#0b0c0f]/35"></div>
+                </div>
+
+                <div class="relative z-10 text-white flex flex-col justify-between h-full">
+                  <div>
+                    <div class="flex items-center space-x-3 mb-6">
+                      <div class="w-12 h-12 rounded-2xl bg-white/10 backdrop-blur-md text-[#fe812e] border border-white/15 flex items-center justify-center">
+                        <i data-lucide="palette" class="w-6 h-6"></i>
+                      </div>
+                      <div>
+                        <h3 class="text-lg font-bold text-white leading-snug font-heading">Creative &amp; Visual Media</h3>
+                        <p class="text-xs font-mono text-[#b3b8b5]">Design, Photography &amp; Content</p>
+                      </div>
+                    </div>
+                    
+                    <div class="flex flex-wrap gap-2">
+                      <span class="skill-chip px-3 py-1.5 rounded-full text-xs font-semibold bg-black/60 text-white border border-white/20 backdrop-blur-md">Adobe Photoshop</span>
+                      <span class="skill-chip px-3 py-1.5 rounded-full text-xs font-semibold bg-black/60 text-white border border-white/20 backdrop-blur-md">Adobe Illustrator</span>
+                      <span class="skill-chip px-3 py-1.5 rounded-full text-xs font-semibold bg-black/60 text-white border border-white/20 backdrop-blur-md">Canva</span>
+                      <span class="skill-chip px-3 py-1.5 rounded-full text-xs font-semibold bg-black/60 text-white border border-white/20 backdrop-blur-md">CapCut Video Editing</span>
+                      <span class="skill-chip px-3 py-1.5 rounded-full text-xs font-semibold bg-black/60 text-white border border-white/20 backdrop-blur-md">UI/UX Design</span>
+                      <span class="skill-chip px-3 py-1.5 rounded-full text-xs font-semibold bg-black/60 text-white border border-white/20 backdrop-blur-md">Product Photography</span>
+                      <span class="skill-chip px-3 py-1.5 rounded-full text-xs font-semibold bg-black/60 text-white border border-white/20 backdrop-blur-md">Social Media Specialist</span>
+                    </div>
+                  </div>
+                  <div class="pt-4 mt-6 border-t border-white/20 flex items-center justify-between text-xs text-[#b3b8b5] font-mono">
+                    <span>7 Creative Assets</span>
+                    <span class="text-[#fe812e] font-bold">Expert</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Category 4: Software Development (Code.jpg) -->
+              <div class="w-[85vw] sm:w-[360px] md:w-[390px] min-h-[420px] flex-shrink-0 snap-start relative overflow-hidden rounded-[20px] p-6 sm:p-7 border border-white/15 shadow-xl hover:border-[#fe812e] transition-all flex flex-col justify-between group">
+                <div class="absolute inset-0 z-0 overflow-hidden">
+                  <img src="../assets/images/Code.jpg" alt="Software Development" class="w-full h-full object-cover object-center transform group-hover:scale-105 transition-transform duration-700 ease-out" loading="lazy">
+                  <div class="absolute inset-0 bg-gradient-to-t from-[#0b0c0f]/95 via-[#0b0c0f]/70 to-[#0b0c0f]/35"></div>
+                </div>
+
+                <div class="relative z-10 text-white flex flex-col justify-between h-full">
+                  <div>
+                    <div class="flex items-center space-x-3 mb-6">
+                      <div class="w-12 h-12 rounded-2xl bg-white/10 backdrop-blur-md text-[#fe812e] border border-white/15 flex items-center justify-center">
+                        <i data-lucide="code-2" class="w-6 h-6"></i>
+                      </div>
+                      <div>
+                        <h3 class="text-lg font-bold text-white leading-snug font-heading">Software Development</h3>
+                        <p class="text-xs font-mono text-[#b3b8b5]">Mobile, Web &amp; API Integration</p>
+                      </div>
+                    </div>
+                    
+                    <div class="flex flex-wrap gap-2">
+                      <span class="skill-chip px-3 py-1.5 rounded-full text-xs font-semibold bg-black/60 text-white border border-white/20 backdrop-blur-md">Mobile Dev (Kotlin &amp; Flutter)</span>
+                      <span class="skill-chip px-3 py-1.5 rounded-full text-xs font-semibold bg-black/60 text-white border border-white/20 backdrop-blur-md">Web Development</span>
+                      <span class="skill-chip px-3 py-1.5 rounded-full text-xs font-semibold bg-black/60 text-white border border-white/20 backdrop-blur-md">API Integration</span>
+                      <span class="skill-chip px-3 py-1.5 rounded-full text-xs font-semibold bg-black/60 text-white border border-white/20 backdrop-blur-md">RESTful Services</span>
+                      <span class="skill-chip px-3 py-1.5 rounded-full text-xs font-semibold bg-black/60 text-white border border-white/20 backdrop-blur-md">Git &amp; Version Control</span>
+                      <span class="skill-chip px-3 py-1.5 rounded-full text-xs font-semibold bg-black/60 text-white border border-white/20 backdrop-blur-md">Augmented Reality (AR)</span>
+                    </div>
+                  </div>
+                  <div class="pt-4 mt-6 border-t border-white/20 flex items-center justify-between text-xs text-[#b3b8b5] font-mono">
+                    <span>6 Core Engineering</span>
+                    <span class="text-[#fe812e] font-bold">Proficient</span>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Floating Next Button (Right) -->
+            <button type="button" onclick="scrollCarousel('skills-carousel', 1)" aria-label="Slide berikutnya" class="absolute -right-2 sm:-right-5 top-1/2 -translate-y-1/2 z-20 w-11 h-11 sm:w-12 sm:h-12 rounded-full bg-white text-[#0b0c0f] shadow-xl hover:bg-[#fe812e] hover:text-white flex items-center justify-center border border-black/10 hover:scale-110 active:scale-95 transition-all focus:outline-none">
+              <i data-lucide="chevron-right" class="w-6 h-6"></i>
+            </button>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================== -->
+    <!-- 5. WORK EXPERIENCE (RESUMLY EDITORIAL CARDS WITH CLEAR PHOTOS)           -->
+    <!-- ======================================================================== -->
+    <section id="experience" class="py-20 sm:py-28 relative">
+      <div class="max-w-[1200px] mx-auto px-4 sm:px-8">
+        
+        <!-- Section Header (No subtitle as requested) -->
+        <div class="mb-12 sm:mb-16 reveal">
+          <span class="text-xs font-mono uppercase tracking-widest text-[#fe812e] font-semibold block mb-2">// Career Track</span>
+          <h2 class="font-heading text-3xl sm:text-5xl font-bold text-[#0b0c0f] dark:text-white tracking-tight">
+            Work Experience
+          </h2>
+        </div>
+
+        <!-- Experience Stack (Ordered 1 to 4: Museum Tsunami -> Warehouse -> Graphic Designer -> BPS) -->
+        <div class="space-y-8">
+          
+          <!-- 1. Social Media Specialist - UPTD Museum Tsunami Aceh -->
+          <a href="detail-experience.html?id=tsunami-museum" class="resumly-card block relative overflow-hidden rounded-[24px] p-6 sm:p-8 md:p-10 border border-black/10 dark:border-white/15 shadow-xl group reveal">
+            <!-- Background Image (Mutsu.jpg) -->
+            <div class="absolute inset-0 z-0 overflow-hidden">
+              <img src="../assets/images/Mutsu.jpg" alt="UPTD Museum Tsunami Aceh" class="w-full h-full object-cover object-center transform group-hover:scale-105 transition-transform duration-700 ease-out" loading="lazy">
+              <div class="absolute inset-0 bg-gradient-to-t from-[#0b0c0f]/95 via-[#0b0c0f]/55 to-[#0b0c0f]/25"></div>
+            </div>
+
+            <div class="relative z-10 text-white">
+              <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-5">
+                <div class="flex flex-wrap items-center gap-2.5">
+                  <span class="px-4 py-1.5 rounded-full text-xs font-mono font-bold bg-[#3555c8] text-white shadow-md">
+                    October 2025 – November 2025
+                  </span>
+                  <span class="text-xs font-mono font-semibold px-3 py-1.5 rounded-full bg-black/60 text-slate-200 border border-white/20 backdrop-blur-md">
+                    Internship
+                  </span>
+                </div>
+                <div class="inline-flex items-center gap-2 text-xs font-bold text-white group-hover:bg-[#fe812e] transition-colors bg-black/60 px-4 py-2 rounded-full backdrop-blur-md border border-white/20 w-fit">
+                  <span>Lihat Detail &amp; Galeri</span>
+                  <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+                </div>
+              </div>
+
+              <h3 class="font-heading text-2xl sm:text-3xl md:text-4xl font-bold text-white tracking-tight drop-shadow-md group-hover:text-[#fe812e] transition-colors">
+                Social Media Specialist
+              </h3>
+              <p class="text-base sm:text-lg font-semibold text-white/90 mt-1 mb-6 flex items-center gap-2">
+                <i data-lucide="building-2" class="w-5 h-5 text-[#fe812e]"></i>
+                <span>UPTD Museum Tsunami Aceh</span>
+              </p>
+
+              <div class="bg-[#0b0c0f]/75 backdrop-blur-md p-5 sm:p-6 rounded-[20px] border border-white/15">
+                <ul class="space-y-2.5 text-sm sm:text-base text-slate-100 leading-relaxed">
+                  <li class="flex items-start gap-3">
+                    <span class="w-2 h-2 rounded-full bg-[#fe812e] mt-2 shrink-0"></span>
+                    <span>Created and curated educational historical content and operational updates for the official social media channels to boost audience engagement rates.</span>
+                  </li>
+                  <li class="flex items-start gap-3">
+                    <span class="w-2 h-2 rounded-full bg-[#fe812e] mt-2 shrink-0"></span>
+                    <span>Designed and structured monthly content calendars to ensure consistent publication of historical narratives and event promotions.</span>
+                  </li>
+                  <li class="flex items-start gap-3">
+                    <span class="w-2 h-2 rounded-full bg-[#fe812e] mt-2 shrink-0"></span>
+                    <span>Served as the official documentary for large-scale public events and state visits at the museum, producing digital publication assets.</span>
+                  </li>
+                </ul>
+
+                <div class="flex flex-wrap gap-2 pt-4 mt-4 border-t border-white/15">
+                  <span class="text-xs font-mono px-3 py-1 rounded-full bg-white/10 text-white border border-white/15">Content Planning</span>
+                  <span class="text-xs font-mono px-3 py-1 rounded-full bg-white/10 text-white border border-white/15">Photography</span>
+                  <span class="text-xs font-mono px-3 py-1 rounded-full bg-white/10 text-white border border-white/15">Video Editing</span>
+                  <span class="text-xs font-mono px-3 py-1 rounded-full bg-white/10 text-white border border-white/15">Event Documentation</span>
+                </div>
+              </div>
+            </div>
+          </a>
+
+          <!-- 2. Warehouse Staff - Dindinshop -->
+          <a href="detail-experience.html?id=dindin-warehouse" class="resumly-card block relative overflow-hidden rounded-[24px] p-6 sm:p-8 md:p-10 border border-black/10 dark:border-white/15 shadow-xl group reveal delay-100">
+            <!-- Background Image (Dindinshop2.JPG) -->
+            <div class="absolute inset-0 z-0 overflow-hidden">
+              <img src="../assets/images/Dindinshop2.JPG" alt="Dindinshop Warehouse" class="w-full h-full object-cover object-center transform group-hover:scale-105 transition-transform duration-700 ease-out" loading="lazy">
+              <div class="absolute inset-0 bg-gradient-to-t from-[#0b0c0f]/95 via-[#0b0c0f]/55 to-[#0b0c0f]/25"></div>
+            </div>
+
+            <div class="relative z-10 text-white">
+              <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-5">
+                <div class="flex flex-wrap items-center gap-2.5">
+                  <span class="px-4 py-1.5 rounded-full text-xs font-mono font-bold bg-[#3555c8] text-white shadow-md">
+                    August 2024 – August 2025
+                  </span>
+                  <span class="text-xs font-mono font-semibold px-3 py-1.5 rounded-full bg-black/60 text-slate-200 border border-white/20 backdrop-blur-md">
+                    Full-time (1 Tahun)
+                  </span>
+                </div>
+                <div class="inline-flex items-center gap-2 text-xs font-bold text-white group-hover:bg-[#fe812e] transition-colors bg-black/60 px-4 py-2 rounded-full backdrop-blur-md border border-white/20 w-fit">
+                  <span>Lihat Detail &amp; Galeri</span>
+                  <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+                </div>
+              </div>
+
+              <h3 class="font-heading text-2xl sm:text-3xl md:text-4xl font-bold text-white tracking-tight drop-shadow-md group-hover:text-[#fe812e] transition-colors">
+                Warehouse Staff
+              </h3>
+              <p class="text-base sm:text-lg font-semibold text-white/90 mt-1 mb-6 flex items-center gap-2">
+                <i data-lucide="building-2" class="w-5 h-5 text-[#fe812e]"></i>
+                <span>Dindinshop</span>
+              </p>
+
+              <div class="bg-[#0b0c0f]/75 backdrop-blur-md p-5 sm:p-6 rounded-[20px] border border-white/15">
+                <ul class="space-y-2.5 text-sm sm:text-base text-slate-100 leading-relaxed">
+                  <li class="flex items-start gap-3">
+                    <span class="w-2 h-2 rounded-full bg-[#fe812e] mt-2 shrink-0"></span>
+                    <span>Supervised incoming and outgoing distribution flows and led regular monthly stock taking execution to maintain high inventory accuracy.</span>
+                  </li>
+                  <li class="flex items-start gap-3">
+                    <span class="w-2 h-2 rounded-full bg-[#fe812e] mt-2 shrink-0"></span>
+                    <span>Compiled periodic sales reports and designed visualizations of inventory turnover trends using Microsoft Excel to support management in product procurement decisions.</span>
+                  </li>
+                  <li class="flex items-start gap-3">
+                    <span class="w-2 h-2 rounded-full bg-[#fe812e] mt-2 shrink-0"></span>
+                    <span>Built a more structured inventory tracking system to accelerate data retrieval and minimize the risk of inventory discrepancies.</span>
+                  </li>
+                </ul>
+
+                <div class="flex flex-wrap gap-2 pt-4 mt-4 border-t border-white/15">
+                  <span class="text-xs font-mono px-3 py-1 rounded-full bg-white/10 text-white border border-white/15">Excel</span>
+                  <span class="text-xs font-mono px-3 py-1 rounded-full bg-white/10 text-white border border-white/15">Inventory Accuracy</span>
+                  <span class="text-xs font-mono px-3 py-1 rounded-full bg-white/10 text-white border border-white/15">Warehouse Management</span>
+                  <span class="text-xs font-mono px-3 py-1 rounded-full bg-white/10 text-white border border-white/15">Logistic</span>
+                </div>
+              </div>
+            </div>
+          </a>
+
+          <!-- 3. Graphic Designer - Dindinshop -->
+          <a href="detail-experience.html?id=dindin-graphic" class="resumly-card block relative overflow-hidden rounded-[24px] p-6 sm:p-8 md:p-10 border border-black/10 dark:border-white/15 shadow-xl group reveal delay-200">
+            <!-- Background Image (Dindinshop3.JPG) -->
+            <div class="absolute inset-0 z-0 overflow-hidden">
+              <img src="../assets/images/Dindinshop3.JPG" alt="Dindinshop Graphic Designer" class="w-full h-full object-cover object-center transform group-hover:scale-105 transition-transform duration-700 ease-out" loading="lazy">
+              <div class="absolute inset-0 bg-gradient-to-t from-[#0b0c0f]/95 via-[#0b0c0f]/55 to-[#0b0c0f]/25"></div>
+            </div>
+
+            <div class="relative z-10 text-white">
+              <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-5">
+                <div class="flex flex-wrap items-center gap-2.5">
+                  <span class="px-4 py-1.5 rounded-full text-xs font-mono font-bold bg-[#3555c8] text-white shadow-md">
+                    February 2022 – July 2024
+                  </span>
+                  <span class="text-xs font-mono font-semibold px-3 py-1.5 rounded-full bg-black/60 text-slate-200 border border-white/20 backdrop-blur-md">
+                    Professional (2.5 Tahun)
+                  </span>
+                </div>
+                <div class="inline-flex items-center gap-2 text-xs font-bold text-white group-hover:bg-[#fe812e] transition-colors bg-black/60 px-4 py-2 rounded-full backdrop-blur-md border border-white/20 w-fit">
+                  <span>Lihat Detail &amp; Galeri</span>
+                  <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+                </div>
+              </div>
+
+              <h3 class="font-heading text-2xl sm:text-3xl md:text-4xl font-bold text-white tracking-tight drop-shadow-md group-hover:text-[#fe812e] transition-colors">
+                Graphic Designer
+              </h3>
+              <p class="text-base sm:text-lg font-semibold text-white/90 mt-1 mb-6 flex items-center gap-2">
+                <i data-lucide="building-2" class="w-5 h-5 text-[#fe812e]"></i>
+                <span>Dindinshop</span>
+              </p>
+
+              <div class="bg-[#0b0c0f]/75 backdrop-blur-md p-5 sm:p-6 rounded-[20px] border border-white/15">
+                <ul class="space-y-2.5 text-sm sm:text-base text-slate-100 leading-relaxed">
+                  <li class="flex items-start gap-3">
+                    <span class="w-2 h-2 rounded-full bg-[#fe812e] mt-2 shrink-0"></span>
+                    <span>Directed product photography shoots for digital and print fashion catalogs to strengthen the brand's visuals identity.</span>
+                  </li>
+                  <li class="flex items-start gap-3">
+                    <span class="w-2 h-2 rounded-full bg-[#fe812e] mt-2 shrink-0"></span>
+                    <span>Produced and edited high-converting creative video content for social media platforms to increase customers interaction and brand reach.</span>
+                  </li>
+                  <li class="flex items-start gap-3">
+                    <span class="w-2 h-2 rounded-full bg-[#fe812e] mt-2 shrink-0"></span>
+                    <span>Designed various promotional and corporate assets, including lanyards, banners, billboards, and marketing campaign posters.</span>
+                  </li>
+                </ul>
+
+                <div class="flex flex-wrap gap-2 pt-4 mt-4 border-t border-white/15">
+                  <span class="text-xs font-mono px-3 py-1 rounded-full bg-white/10 text-white border border-white/15">Adobe Photoshop</span>
+                  <span class="text-xs font-mono px-3 py-1 rounded-full bg-white/10 text-white border border-white/15">Adobe Illustrator</span>
+                  <span class="text-xs font-mono px-3 py-1 rounded-full bg-white/10 text-white border border-white/15">Video Editing</span>
+                  <span class="text-xs font-mono px-3 py-1 rounded-full bg-white/10 text-white border border-white/15">Product Photography</span>
+                  <span class="text-xs font-mono px-3 py-1 rounded-full bg-white/10 text-white border border-white/15">Social Media Specialist</span>
+                </div>
+              </div>
+            </div>
+          </a>
+
+          <!-- 4. IT Internship - Badan Pusat Statistik (BPS) Aceh -->
+          <a href="detail-experience.html?id=bps-intern" class="resumly-card block relative overflow-hidden rounded-[24px] p-6 sm:p-8 md:p-10 border border-black/10 dark:border-white/15 shadow-xl group reveal delay-300">
+            <!-- Background Image (bps.png) -->
+            <div class="absolute inset-0 z-0 overflow-hidden">
+              <img src="../assets/images/bps.png" alt="Badan Pusat Statistik Aceh" class="w-full h-full object-cover object-center transform group-hover:scale-105 transition-transform duration-700 ease-out" loading="lazy">
+              <div class="absolute inset-0 bg-gradient-to-t from-[#0b0c0f]/95 via-[#0b0c0f]/55 to-[#0b0c0f]/25"></div>
+            </div>
+
+            <div class="relative z-10 text-white">
+              <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-5">
+                <div class="flex flex-wrap items-center gap-2.5">
+                  <span class="px-4 py-1.5 rounded-full text-xs font-mono font-bold bg-[#3555c8] text-white shadow-md">
+                    March 2023 – April 2023
+                  </span>
+                  <span class="text-xs font-mono font-semibold px-3 py-1.5 rounded-full bg-black/60 text-slate-200 border border-white/20 backdrop-blur-md">
+                    IT Internship
+                  </span>
+                </div>
+                <div class="inline-flex items-center gap-2 text-xs font-bold text-white group-hover:bg-[#fe812e] transition-colors bg-black/60 px-4 py-2 rounded-full backdrop-blur-md border border-white/20 w-fit">
+                  <span>Lihat Detail &amp; Galeri</span>
+                  <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+                </div>
+              </div>
+
+              <h3 class="font-heading text-2xl sm:text-3xl md:text-4xl font-bold text-white tracking-tight drop-shadow-md group-hover:text-[#fe812e] transition-colors">
+                IT Internship
+              </h3>
+              <p class="text-base sm:text-lg font-semibold text-white/90 mt-1 mb-6 flex items-center gap-2">
+                <i data-lucide="building-2" class="w-5 h-5 text-[#fe812e]"></i>
+                <span>Badan Pusat Statistik (BPS) Aceh</span>
+              </p>
+
+              <div class="bg-[#0b0c0f]/75 backdrop-blur-md p-5 sm:p-6 rounded-[20px] border border-white/15">
+                <ul class="space-y-2.5 text-sm sm:text-base text-slate-100 leading-relaxed">
+                  <li class="flex items-start gap-3">
+                    <span class="w-2 h-2 rounded-full bg-[#fe812e] mt-2 shrink-0"></span>
+                    <span>Conducted data cleaning and preprocessing on macroeconomic survey data using Python (Pandas &amp; NumPy) to ensure data accuracy and validity prior to analysis.</span>
+                  </li>
+                  <li class="flex items-start gap-3">
+                    <span class="w-2 h-2 rounded-full bg-[#fe812e] mt-2 shrink-0"></span>
+                    <span>Designed and developed an interactive Telegram chatbot using Python as an automated public information service to accelerate data distribution for citizens.</span>
+                  </li>
+                  <li class="flex items-start gap-3">
+                    <span class="w-2 h-2 rounded-full bg-[#fe812e] mt-2 shrink-0"></span>
+                    <span>Collaborated with the IT team to optimize the data entry website platform, minimizing human error and accelerating field survey data input processes.</span>
+                  </li>
+                </ul>
+
+                <div class="flex flex-wrap gap-2 pt-4 mt-4 border-t border-white/15">
+                  <span class="text-xs font-mono px-3 py-1 rounded-full bg-white/10 text-white border border-white/15">Data Preprocessing</span>
+                  <span class="text-xs font-mono px-3 py-1 rounded-full bg-white/10 text-white border border-white/15">Python</span>
+                  <span class="text-xs font-mono px-3 py-1 rounded-full bg-white/10 text-white border border-white/15">Website development</span>
+                  <span class="text-xs font-mono px-3 py-1 rounded-full bg-white/10 text-white border border-white/15">AI Engineer</span>
+                </div>
+              </div>
+            </div>
+          </a>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ======================================================================== -->
+    <!-- 6. ORGANIZATIONAL & LEADERSHIP EXPERIENCE (RESUMLY CAROUSEL)             -->
+    <!-- ======================================================================== -->
+    <section id="organization" class="py-16 sm:py-24 relative">
+      <div class="max-w-[1200px] mx-auto px-4 sm:px-8">
+        
+        <!-- Section Header (No subtitle as requested) -->
+        <div class="mb-10 reveal">
+          <span class="text-xs font-mono uppercase tracking-widest text-[#fe812e] font-semibold block mb-2">// Leadership &amp; Community</span>
+          <h2 class="font-heading text-3xl sm:text-5xl font-bold text-[#0b0c0f] dark:text-white tracking-tight">
+            Organizational &amp; Leadership Experience
+          </h2>
+        </div>
+
+        <!-- Organization Horizontal Carousel with Floating Side Arrows -->
+        <div class="relative group/carousel">
+          <button type="button" onclick="scrollCarousel('org-carousel', -1)" aria-label="Slide sebelumnya" class="absolute -left-2 sm:-left-5 top-1/2 -translate-y-1/2 z-20 w-11 h-11 sm:w-12 sm:h-12 rounded-full bg-[#0b0c0f] dark:bg-white text-white dark:text-[#0b0c0f] shadow-xl hover:bg-[#fe812e] hover:text-white dark:hover:bg-[#fe812e] dark:hover:text-white flex items-center justify-center border border-white/15 hover:scale-110 active:scale-95 transition-all focus:outline-none">
+            <i data-lucide="chevron-left" class="w-6 h-6"></i>
+          </button>
+
+          <div id="org-carousel" class="flex overflow-x-auto snap-x snap-mandatory scroll-smooth no-scrollbar gap-6 pb-6 pt-2 px-1 sm:px-0">
+            
+            <!-- Org 1: Guest Speaker TELKOM AI Connect -->
+            <div class="w-[85vw] sm:w-[350px] md:w-[370px] flex-shrink-0 snap-start resumly-card bg-white dark:bg-[#16171b] p-5 sm:p-6 border border-black/5 dark:border-white/10 shadow-sm hover:border-[#fe812e] flex flex-col justify-between">
+              <div>
+                <div class="h-48 overflow-hidden rounded-[16px] bg-[#0b0c0f] mb-5 relative group/img">
+                  <img src="../assets/images/AICONNECT.JPG" alt="TELKOM AI Connect Aceh" class="w-full h-full object-cover transition-transform duration-500 group-hover/img:scale-105" loading="lazy">
+                </div>
+                <div class="mb-3">
+                  <span class="px-3 py-1 rounded-full text-xs font-mono font-bold bg-[#fe812e]/15 text-[#f63c0c] dark:text-[#fe812e]">2026</span>
+                </div>
+                <h3 class="font-heading text-xl font-bold text-[#0b0c0f] dark:text-white leading-snug">Guest Speaker</h3>
+                <p class="text-xs font-bold text-[#3555c8] dark:text-[#fe812e] mt-1 mb-3">TELKOM AI Connect Aceh</p>
+                <p class="text-xs sm:text-sm text-[#54585c] dark:text-[#b3b8b5] leading-relaxed">
+                  Invited by the Telkom AI Connect Community to lead a hands-on workshop on leveraging Generative AI for automated content creation and social media management, sharing actionable insights with local creative professionals and digital creators.
+                </p>
+              </div>
+            </div>
+
+            <!-- Org 2: Social Media Trainee PBL BPVP Aceh -->
+            <div class="w-[85vw] sm:w-[350px] md:w-[370px] flex-shrink-0 snap-start resumly-card bg-white dark:bg-[#16171b] p-5 sm:p-6 border border-black/5 dark:border-white/10 shadow-sm hover:border-[#fe812e] flex flex-col justify-between">
+              <div>
+                <div class="h-48 overflow-hidden rounded-[16px] bg-[#0b0c0f] mb-5 relative group/img">
+                  <img src="../assets/images/BPVP.jpg" alt="BPVP Aceh" class="w-full h-full object-cover transition-transform duration-500 group-hover/img:scale-105" loading="lazy">
+                </div>
+                <div class="mb-3">
+                  <span class="px-3 py-1 rounded-full text-xs font-mono font-bold bg-[#fe812e]/15 text-[#f63c0c] dark:text-[#fe812e]">2025</span>
+                </div>
+                <h3 class="font-heading text-xl font-bold text-[#0b0c0f] dark:text-white leading-snug">Social Media Trainee PBL</h3>
+                <p class="text-xs font-bold text-[#3555c8] dark:text-[#fe812e] mt-1 mb-3">BPVP Aceh</p>
+                <p class="text-xs sm:text-sm text-[#54585c] dark:text-[#b3b8b5] leading-relaxed">
+                  Completed a Project-Based Learning program and earned a national BNSP Certification in Social Media Optimization. Mastered end-to-end digital marketing strategies, Meta Ads campaign management, and data-driven performance analytics.
+                </p>
+              </div>
+            </div>
+
+            <!-- Org 3: Head of Talent & Interest Division HIMATEKKOM USK -->
+            <div class="w-[85vw] sm:w-[350px] md:w-[370px] flex-shrink-0 snap-start resumly-card bg-white dark:bg-[#16171b] p-5 sm:p-6 border border-black/5 dark:border-white/10 shadow-sm hover:border-[#fe812e] flex flex-col justify-between">
+              <div>
+                <div class="h-48 overflow-hidden rounded-[16px] bg-[#0b0c0f] mb-5 relative group/img">
+                  <img src="../assets/images/Himatekkom.jpg" alt="HIMATEKKOM USK" class="w-full h-full object-cover transition-transform duration-500 group-hover/img:scale-105" loading="lazy">
+                </div>
+                <div class="mb-3">
+                  <span class="px-3 py-1 rounded-full text-xs font-mono font-bold bg-[#fe812e]/15 text-[#f63c0c] dark:text-[#fe812e]">2023 – 2024</span>
+                </div>
+                <h3 class="font-heading text-xl font-bold text-[#0b0c0f] dark:text-white leading-snug">Head of Talent &amp; Interest Division</h3>
+                <p class="text-xs font-bold text-[#3555c8] dark:text-[#fe812e] mt-1 mb-3">HIMATEKKOM USK</p>
+                <p class="text-xs sm:text-sm text-[#54585c] dark:text-[#b3b8b5] leading-relaxed">
+                  Led student initiatives focused on non-academic skill development for Computer Engineering students. Successfully organized e-sports tournaments, music workshops, and regular athletic programs to build strong student engagement.
+                </p>
+              </div>
+            </div>
+
+            <!-- Org 4: Mobile Development Bangkit Academy -->
+            <div class="w-[85vw] sm:w-[350px] md:w-[370px] flex-shrink-0 snap-start resumly-card bg-white dark:bg-[#16171b] p-5 sm:p-6 border border-black/5 dark:border-white/10 shadow-sm hover:border-[#fe812e] flex flex-col justify-between">
+              <div>
+                <div class="h-48 overflow-hidden rounded-[16px] bg-[#0b0c0f] mb-5 relative group/img">
+                  <img src="../assets/images/Bangkit.png" alt="Bangkit Academy" class="w-full h-full object-cover transition-transform duration-500 group-hover/img:scale-105" loading="lazy">
+                </div>
+                <div class="mb-3">
+                  <span class="px-3 py-1 rounded-full text-xs font-mono font-bold bg-[#fe812e]/15 text-[#f63c0c] dark:text-[#fe812e]">2023</span>
+                </div>
+                <h3 class="font-heading text-xl font-bold text-[#0b0c0f] dark:text-white leading-snug">Mobile Development</h3>
+                <p class="text-xs font-bold text-[#3555c8] dark:text-[#fe812e] mt-1 mb-3">Bangkit Academy by Google, GoTo, &amp; Traveloka</p>
+                <p class="text-xs sm:text-sm text-[#54585c] dark:text-[#b3b8b5] leading-relaxed">
+                  Selected for a highly competitive 6-month digital technology incubator focused on Native Android Development, software engineering standards, professional English communications, and soft skills training.
+                </p>
+              </div>
+            </div>
+
+            <!-- Org 5: Head of Publication & Documentation RCA FT USK -->
+            <div class="w-[85vw] sm:w-[350px] md:w-[370px] flex-shrink-0 snap-start resumly-card bg-white dark:bg-[#16171b] p-5 sm:p-6 border border-black/5 dark:border-white/10 shadow-sm hover:border-[#fe812e] flex flex-col justify-between">
+              <div>
+                <div class="h-48 overflow-hidden rounded-[16px] bg-[#0b0c0f] mb-5 relative group/img">
+                  <img src="../assets/images/RCA.jpg" alt="Reuni Cinta Almamater FT USK" class="w-full h-full object-cover transition-transform duration-500 group-hover/img:scale-105" loading="lazy">
+                </div>
+                <div class="mb-3">
+                  <span class="px-3 py-1 rounded-full text-xs font-mono font-bold bg-[#fe812e]/15 text-[#f63c0c] dark:text-[#fe812e]">2023</span>
+                </div>
+                <h3 class="font-heading text-xl font-bold text-[#0b0c0f] dark:text-white leading-snug">Head of Publication &amp; Documentation</h3>
+                <p class="text-xs font-bold text-[#3555c8] dark:text-[#fe812e] mt-1 mb-3">Reuni Cinta Almamater FT USK</p>
+                <p class="text-xs sm:text-sm text-[#54585c] dark:text-[#b3b8b5] leading-relaxed">
+                  Directed media production and publication strategies for the Engineering Faculty's flagship annual event. Oversee brand identity development (logos, teasers, promotional posters), live event coverage, and official post-event recap videos.
+                </p>
+              </div>
+            </div>
+
+            <!-- Org 6: Exchange Student Kampus Merdeka UGM & Universitas Pamulang -->
+            <div class="w-[85vw] sm:w-[350px] md:w-[370px] flex-shrink-0 snap-start resumly-card bg-white dark:bg-[#16171b] p-5 sm:p-6 border border-black/5 dark:border-white/10 shadow-sm hover:border-[#fe812e] flex flex-col justify-between">
+              <div>
+                <div class="h-48 overflow-hidden rounded-[16px] bg-[#0b0c0f] mb-5 relative group/img">
+                  <img src="../assets/images/PMM.jpeg" alt="Pertukaran Mahasiswa Merdeka" class="w-full h-full object-cover transition-transform duration-500 group-hover/img:scale-105" loading="lazy">
+                </div>
+                <div class="mb-3">
+                  <span class="px-3 py-1 rounded-full text-xs font-mono font-bold bg-[#fe812e]/15 text-[#f63c0c] dark:text-[#fe812e]">2021</span>
+                </div>
+                <h3 class="font-heading text-xl font-bold text-[#0b0c0f] dark:text-white leading-snug">Exchange Student</h3>
+                <p class="text-xs font-bold text-[#3555c8] dark:text-[#fe812e] mt-1 mb-3">Kampus Merdeka UGM &amp; Universitas Pamulang</p>
+                <p class="text-xs sm:text-sm text-[#54585c] dark:text-[#b3b8b5] leading-relaxed">
+                  Participated in a semester-long national exchange program undertaking hybrid coursework across UGM and UNPAM. Collaborated with students nationwide and engaged in cultural immersion programs exploring historical heritage in Jakarta.
+                </p>
+              </div>
+            </div>
+
+          </div>
+
+          <button type="button" onclick="scrollCarousel('org-carousel', 1)" aria-label="Slide berikutnya" class="absolute -right-2 sm:-right-5 top-1/2 -translate-y-1/2 z-20 w-11 h-11 sm:w-12 sm:h-12 rounded-full bg-[#0b0c0f] dark:bg-white text-white dark:text-[#0b0c0f] shadow-xl hover:bg-[#fe812e] hover:text-white dark:hover:bg-[#fe812e] dark:hover:text-white flex items-center justify-center border border-white/15 hover:scale-110 active:scale-95 transition-all focus:outline-none">
+            <i data-lucide="chevron-right" class="w-6 h-6"></i>
+          </button>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ======================================================================== -->
+    <!-- 7. PROJECTS (TEMPORARILY HIDDEN PER USER REQUEST)                        -->
+    <!-- ======================================================================== -->
+    <section id="projects" class="hidden" style="display: none !important;" aria-hidden="true"></section>
+
+    <!-- ======================================================================== -->
+    <!-- 8. LICENSES & CERTIFICATIONS (RESUMLY CAROUSEL)                          -->
+    <!-- ======================================================================== -->
+    <section id="certifications" class="py-16 sm:py-24 relative">
+      <div class="max-w-[1200px] mx-auto px-4 sm:px-8">
+        
+        <!-- Section Header (No subtitle as requested) -->
+        <div class="mb-10 reveal">
+          <span class="text-xs font-mono uppercase tracking-widest text-[#fe812e] font-semibold block mb-2">// Verified Credentials</span>
+          <h2 class="font-heading text-3xl sm:text-5xl font-bold text-[#0b0c0f] dark:text-white tracking-tight">
+            Licenses &amp; Certifications
+          </h2>
+        </div>
+
+        <!-- Certifications Horizontal Carousel with Floating Side Arrows -->
+        <div class="relative group/carousel">
+          <button type="button" onclick="scrollCarousel('cert-carousel', -1)" aria-label="Slide sebelumnya" class="absolute -left-2 sm:-left-5 top-1/2 -translate-y-1/2 z-20 w-11 h-11 sm:w-12 sm:h-12 rounded-full bg-[#0b0c0f] dark:bg-white text-white dark:text-[#0b0c0f] shadow-xl hover:bg-[#fe812e] hover:text-white dark:hover:bg-[#fe812e] dark:hover:text-white flex items-center justify-center border border-white/15 hover:scale-110 active:scale-95 transition-all focus:outline-none">
+            <i data-lucide="chevron-left" class="w-6 h-6"></i>
+          </button>
+
+          <div id="cert-carousel" class="flex overflow-x-auto snap-x snap-mandatory scroll-smooth no-scrollbar gap-6 pb-6 pt-2 px-1 sm:px-0">
+            
+            <!-- Cert 1: Google Data Analytics Professional Certificate -->
+            <div class="w-[85vw] sm:w-[340px] md:w-[360px] flex-shrink-0 snap-start resumly-card bg-white dark:bg-[#16171b] p-5 sm:p-6 border border-black/5 dark:border-white/10 shadow-sm hover:border-[#fe812e] flex flex-col justify-between">
+              <div>
+                <div class="h-48 overflow-hidden rounded-[16px] bg-[#0b0c0f] relative group/thumb cursor-pointer mb-5" onclick="openCertModal('../assets/images/certif3.jpg', 'Google Data Analytics Professional Certificate', 'Google', '2026', 'Kompetensi komprehensif pengolahan data menggunakan SQL, Tableau, R Programming, data cleaning, dan visualisasi bisnis.')">
+                  <img src="../assets/images/certif3.jpg" alt="Google Data Analytics Professional Certificate" class="w-full h-full object-cover object-top transition-transform duration-500 group-hover/thumb:scale-105" loading="lazy">
+                  <div class="absolute inset-0 bg-black/50 opacity-0 group-hover/thumb:opacity-100 transition-opacity flex items-center justify-center">
+                    <span class="px-4 py-2 rounded-full bg-white text-[#0b0c0f] font-bold text-xs flex items-center gap-1.5 shadow-lg">
+                      <i data-lucide="zoom-in" class="w-4 h-4 text-[#fe812e]"></i>
+                      <span>Pratinjau Sertifikat</span>
+                    </span>
+                  </div>
+                </div>
+                <div class="mb-2">
+                  <span class="px-3 py-1 rounded-full text-xs font-mono font-bold bg-[#fe812e]/15 text-[#f63c0c] dark:text-[#fe812e]">2026</span>
+                </div>
+                <h3 class="font-heading text-lg font-bold text-[#0b0c0f] dark:text-white leading-snug">Google Data Analytics Professional Certificate</h3>
+                <p class="text-xs font-bold text-[#3555c8] dark:text-[#fe812e] mt-1 mb-2">Google</p>
+                <p class="text-xs text-[#54585c] dark:text-[#b3b8b5] leading-relaxed">
+                  Kompetensi menyeluruh dalam pengolahan data menggunakan SQL, visualisasi Tableau, R Programming, serta pembersihan dan validasi data skala besar.
+                </p>
+              </div>
+              <button type="button" onclick="openCertModal('../assets/images/certif3.jpg', 'Google Data Analytics Professional Certificate', 'Google', '2026', 'Kompetensi komprehensif pengolahan data menggunakan SQL, Tableau, R Programming, data cleaning, dan visualisasi bisnis.')" class="btn-resumly-primary w-full mt-5 py-3 px-4 rounded-full font-semibold text-xs sm:text-sm text-white flex items-center justify-center gap-2">
+                <i data-lucide="eye" class="w-4 h-4"></i>
+                <span>View Certification</span>
+              </button>
+            </div>
+
+            <!-- Cert 2: Microsoft Data Analyst with Excel -->
+            <div class="w-[85vw] sm:w-[340px] md:w-[360px] flex-shrink-0 snap-start resumly-card bg-white dark:bg-[#16171b] p-5 sm:p-6 border border-black/5 dark:border-white/10 shadow-sm hover:border-[#fe812e] flex flex-col justify-between">
+              <div>
+                <div class="h-48 overflow-hidden rounded-[16px] bg-[#0b0c0f] relative group/thumb cursor-pointer mb-5" onclick="openCertModal('../assets/images/certif4.jpg', 'Microsoft Data Analyst with Excel', 'Microsoft', '2026', 'Penguasaan model data tingkat lanjut, Power Query, Power Pivot, DAX, serta pembuatan dashboard analitik interaktif.')">
+                  <img src="../assets/images/certif4.jpg" alt="Microsoft Data Analyst with Excel" class="w-full h-full object-cover object-top transition-transform duration-500 group-hover/thumb:scale-105" loading="lazy">
+                  <div class="absolute inset-0 bg-black/50 opacity-0 group-hover/thumb:opacity-100 transition-opacity flex items-center justify-center">
+                    <span class="px-4 py-2 rounded-full bg-white text-[#0b0c0f] font-bold text-xs flex items-center gap-1.5 shadow-lg">
+                      <i data-lucide="zoom-in" class="w-4 h-4 text-[#fe812e]"></i>
+                      <span>Pratinjau Sertifikat</span>
+                    </span>
+                  </div>
+                </div>
+                <div class="mb-2">
+                  <span class="px-3 py-1 rounded-full text-xs font-mono font-bold bg-[#fe812e]/15 text-[#f63c0c] dark:text-[#fe812e]">2026</span>
+                </div>
+                <h3 class="font-heading text-lg font-bold text-[#0b0c0f] dark:text-white leading-snug">Microsoft Data Analyst with Excel</h3>
+                <p class="text-xs font-bold text-[#3555c8] dark:text-[#fe812e] mt-1 mb-2">Microsoft</p>
+                <p class="text-xs text-[#54585c] dark:text-[#b3b8b5] leading-relaxed">
+                  Penguasaan model data tingkat lanjut, Power Query, Power Pivot, DAX, serta pembuatan visual interaktif untuk analitik bisnis perusahaan.
+                </p>
+              </div>
+              <button type="button" onclick="openCertModal('../assets/images/certif4.jpg', 'Microsoft Data Analyst with Excel', 'Microsoft', '2026', 'Penguasaan model data tingkat lanjut, Power Query, Power Pivot, DAX, serta pembuatan dashboard analitik interaktif.')" class="btn-resumly-primary w-full mt-5 py-3 px-4 rounded-full font-semibold text-xs sm:text-sm text-white flex items-center justify-center gap-2">
+                <i data-lucide="eye" class="w-4 h-4"></i>
+                <span>View Certification</span>
+              </button>
+            </div>
+
+            <!-- Cert 3: TOEFL ITP Official Score: 497 -->
+            <div class="w-[85vw] sm:w-[340px] md:w-[360px] flex-shrink-0 snap-start resumly-card bg-white dark:bg-[#16171b] p-5 sm:p-6 border border-black/5 dark:border-white/10 shadow-sm hover:border-[#fe812e] flex flex-col justify-between">
+              <div>
+                <div class="h-48 overflow-hidden rounded-[16px] bg-[#0b0c0f] relative group/thumb cursor-pointer mb-5" onclick="openCertModal('../assets/images/certif7.jpg', 'TOEFL ITP Official Score Report: 497', 'ETS / ILP Cikini', '2026', 'Hasil tes resmi TOEFL ITP mencakup Listening Comprehension, Structure & Written Expression, dan Reading Comprehension.')">
+                  <img src="../assets/images/certif7.jpg" alt="TOEFL ITP Official Score Report: 497" class="w-full h-full object-cover object-top transition-transform duration-500 group-hover/thumb:scale-105" loading="lazy">
+                  <div class="absolute inset-0 bg-black/50 opacity-0 group-hover/thumb:opacity-100 transition-opacity flex items-center justify-center">
+                    <span class="px-4 py-2 rounded-full bg-white text-[#0b0c0f] font-bold text-xs flex items-center gap-1.5 shadow-lg">
+                      <i data-lucide="zoom-in" class="w-4 h-4 text-[#fe812e]"></i>
+                      <span>Pratinjau Sertifikat</span>
+                    </span>
+                  </div>
+                </div>
+                <div class="mb-2">
+                  <span class="px-3 py-1 rounded-full text-xs font-mono font-bold bg-[#fe812e]/15 text-[#f63c0c] dark:text-[#fe812e]">2026</span>
+                </div>
+                <h3 class="font-heading text-lg font-bold text-[#0b0c0f] dark:text-white leading-snug">TOEFL ITP Official Score: 497</h3>
+                <p class="text-xs font-bold text-[#3555c8] dark:text-[#fe812e] mt-1 mb-2">ETS / ILP Cikini</p>
+                <p class="text-xs text-[#54585c] dark:text-[#b3b8b5] leading-relaxed">
+                  Standarisasi kemahiran Bahasa Inggris resmi mencakup Listening Comprehension, Structure &amp; Written Expression, serta Reading Comprehension.
+                </p>
+              </div>
+              <button type="button" onclick="openCertModal('../assets/images/certif7.jpg', 'TOEFL ITP Official Score Report: 497', 'ETS / ILP Cikini', '2026', 'Hasil tes resmi TOEFL ITP mencakup Listening Comprehension, Structure & Written Expression, dan Reading Comprehension.')" class="btn-resumly-primary w-full mt-5 py-3 px-4 rounded-full font-semibold text-xs sm:text-sm text-white flex items-center justify-center gap-2">
+                <i data-lucide="eye" class="w-4 h-4"></i>
+                <span>View Certification</span>
+              </button>
+            </div>
+
+            <!-- Cert 4: Sertifikasi BNSP Pemasaran Media Sosial -->
+            <div class="w-[85vw] sm:w-[340px] md:w-[360px] flex-shrink-0 snap-start resumly-card bg-white dark:bg-[#16171b] p-5 sm:p-6 border border-black/5 dark:border-white/10 shadow-sm hover:border-[#fe812e] flex flex-col justify-between">
+              <div>
+                <div class="h-48 overflow-hidden rounded-[16px] bg-[#0b0c0f] relative group/thumb cursor-pointer mb-5" onclick="openCertModal('../assets/images/certif2.jpg', 'Sertifikasi Kompetensi Optimalisasi Pemasaran Melalui Media Sosial', 'BNSP (Badan Nasional Sertifikasi Profesi)', '2025', 'Sertifikasi kompetensi resmi standar nasional kerja Republik Indonesia bidang pemasaran media sosial dan konten digital.')">
+                  <img src="../assets/images/certif2.jpg" alt="Sertifikasi Kompetensi BNSP" class="w-full h-full object-cover object-top transition-transform duration-500 group-hover/thumb:scale-105" loading="lazy">
+                  <div class="absolute inset-0 bg-black/50 opacity-0 group-hover/thumb:opacity-100 transition-opacity flex items-center justify-center">
+                    <span class="px-4 py-2 rounded-full bg-white text-[#0b0c0f] font-bold text-xs flex items-center gap-1.5 shadow-lg">
+                      <i data-lucide="zoom-in" class="w-4 h-4 text-[#fe812e]"></i>
+                      <span>Pratinjau Sertifikat</span>
+                    </span>
+                  </div>
+                </div>
+                <div class="mb-2">
+                  <span class="px-3 py-1 rounded-full text-xs font-mono font-bold bg-[#fe812e]/15 text-[#f63c0c] dark:text-[#fe812e]">2025</span>
+                </div>
+                <h3 class="font-heading text-lg font-bold text-[#0b0c0f] dark:text-white leading-snug">Optimalisasi Pemasaran Melalui Media Sosial</h3>
+                <p class="text-xs font-bold text-[#3555c8] dark:text-[#fe812e] mt-1 mb-2">BNSP (Badan Nasional Sertifikasi Profesi)</p>
+                <p class="text-xs text-[#54585c] dark:text-[#b3b8b5] leading-relaxed">
+                  Sertifikasi standar kompetensi kerja nasional Republik Indonesia dalam strategi pemasaran digital dan optimasi media sosial terukur.
+                </p>
+              </div>
+              <button type="button" onclick="openCertModal('../assets/images/certif2.jpg', 'Sertifikasi Kompetensi Optimalisasi Pemasaran Melalui Media Sosial', 'BNSP (Badan Nasional Sertifikasi Profesi)', '2025', 'Sertifikasi kompetensi resmi standar nasional kerja Republik Indonesia bidang pemasaran media sosial dan konten digital.')" class="btn-resumly-primary w-full mt-5 py-3 px-4 rounded-full font-semibold text-xs sm:text-sm text-white flex items-center justify-center gap-2">
+                <i data-lucide="eye" class="w-4 h-4"></i>
+                <span>View Certification</span>
+              </button>
+            </div>
+
+            <!-- Cert 5: Digitalent Intermediate Data Science -->
+            <div class="w-[85vw] sm:w-[340px] md:w-[360px] flex-shrink-0 snap-start resumly-card bg-white dark:bg-[#16171b] p-5 sm:p-6 border border-black/5 dark:border-white/10 shadow-sm hover:border-[#fe812e] flex flex-col justify-between">
+              <div>
+                <div class="h-48 overflow-hidden rounded-[16px] bg-[#0b0c0f] relative group/thumb cursor-pointer mb-5" onclick="openCertModal('../assets/images/certif6.jpg', 'Digitalent Intermediate Data Science', 'Kementerian Kominfo', '2025', 'Sertifikasi pelatihan tingkat menengah Data Science dan Machine Learning terapan dari Kementerian Kominfo.')">
+                  <img src="../assets/images/certif6.jpg" alt="Digitalent Intermediate Data Science" class="w-full h-full object-cover object-top transition-transform duration-500 group-hover/thumb:scale-105" loading="lazy">
+                  <div class="absolute inset-0 bg-black/50 opacity-0 group-hover/thumb:opacity-100 transition-opacity flex items-center justify-center">
+                    <span class="px-4 py-2 rounded-full bg-white text-[#0b0c0f] font-bold text-xs flex items-center gap-1.5 shadow-lg">
+                      <i data-lucide="zoom-in" class="w-4 h-4 text-[#fe812e]"></i>
+                      <span>Pratinjau Sertifikat</span>
+                    </span>
+                  </div>
+                </div>
+                <div class="mb-2">
+                  <span class="px-3 py-1 rounded-full text-xs font-mono font-bold bg-[#fe812e]/15 text-[#f63c0c] dark:text-[#fe812e]">2025</span>
+                </div>
+                <h3 class="font-heading text-lg font-bold text-[#0b0c0f] dark:text-white leading-snug">Digitalent Intermediate Data Science</h3>
+                <p class="text-xs font-bold text-[#3555c8] dark:text-[#fe812e] mt-1 mb-2">Kementerian Kominfo</p>
+                <p class="text-xs text-[#54585c] dark:text-[#b3b8b5] leading-relaxed">
+                  Penerapan supervised &amp; unsupervised machine learning, feature engineering, eksplorasi data, dan validasi algoritma klasifikasi &amp; regresi.
+                </p>
+              </div>
+              <button type="button" onclick="openCertModal('../assets/images/certif6.jpg', 'Digitalent Intermediate Data Science', 'Kementerian Kominfo', '2025', 'Sertifikasi pelatihan tingkat menengah Data Science dan Machine Learning terapan dari Kementerian Kominfo.')" class="btn-resumly-primary w-full mt-5 py-3 px-4 rounded-full font-semibold text-xs sm:text-sm text-white flex items-center justify-center gap-2">
+                <i data-lucide="eye" class="w-4 h-4"></i>
+                <span>View Certification</span>
+              </button>
+            </div>
+
+            <!-- Cert 6: Mobile Development Cohort Certification - Bangkit Academy -->
+            <div class="w-[85vw] sm:w-[340px] md:w-[360px] flex-shrink-0 snap-start resumly-card bg-white dark:bg-[#16171b] p-5 sm:p-6 border border-black/5 dark:border-white/10 shadow-sm hover:border-[#fe812e] flex flex-col justify-between">
+              <div>
+                <div class="h-48 overflow-hidden rounded-[16px] bg-[#0b0c0f] relative group/thumb cursor-pointer mb-5" onclick="openCertModal('../assets/images/certif1.jpg', 'Mobile Development Cohort Certification', 'Bangkit Academy (Google, GoTo, Traveloka)', '2023', 'Sertifikat resmi kelulusan program akselerasi Google Bangkit Academy jalur Mobile Development & Capstone Project.')">
+                  <img src="../assets/images/certif1.jpg" alt="Mobile Development Cohort Certification" class="w-full h-full object-cover object-top transition-transform duration-500 group-hover/thumb:scale-105" loading="lazy">
+                  <div class="absolute inset-0 bg-black/50 opacity-0 group-hover/thumb:opacity-100 transition-opacity flex items-center justify-center">
+                    <span class="px-4 py-2 rounded-full bg-white text-[#0b0c0f] font-bold text-xs flex items-center gap-1.5 shadow-lg">
+                      <i data-lucide="zoom-in" class="w-4 h-4 text-[#fe812e]"></i>
+                      <span>Pratinjau Sertifikat</span>
+                    </span>
+                  </div>
+                </div>
+                <div class="mb-2">
+                  <span class="px-3 py-1 rounded-full text-xs font-mono font-bold bg-[#fe812e]/15 text-[#f63c0c] dark:text-[#fe812e]">2023</span>
+                </div>
+                <h3 class="font-heading text-lg font-bold text-[#0b0c0f] dark:text-white leading-snug">Mobile Development Cohort Certification</h3>
+                <p class="text-xs font-bold text-[#3555c8] dark:text-[#fe812e] mt-1 mb-2">Bangkit Academy by Google, GoTo, &amp; Traveloka</p>
+                <p class="text-xs text-[#54585c] dark:text-[#b3b8b5] leading-relaxed">
+                  Pelatihan intensif pengembangan aplikasi mobile Android native, clean architecture, integrasi API, dan penyelesaian proyek capstone tim.
+                </p>
+              </div>
+              <button type="button" onclick="openCertModal('../assets/images/certif1.jpg', 'Mobile Development Cohort Certification', 'Bangkit Academy (Google, GoTo, Traveloka)', '2023', 'Sertifikat resmi kelulusan program akselerasi Google Bangkit Academy jalur Mobile Development & Capstone Project.')" class="btn-resumly-primary w-full mt-5 py-3 px-4 rounded-full font-semibold text-xs sm:text-sm text-white flex items-center justify-center gap-2">
+                <i data-lucide="eye" class="w-4 h-4"></i>
+                <span>View Certification</span>
+              </button>
+            </div>
+
+            <!-- Cert 7: Pertukaran Mahasiswa Merdeka (PMM) -->
+            <div class="w-[85vw] sm:w-[340px] md:w-[360px] flex-shrink-0 snap-start resumly-card bg-white dark:bg-[#16171b] p-5 sm:p-6 border border-black/5 dark:border-white/10 shadow-sm hover:border-[#fe812e] flex flex-col justify-between">
+              <div>
+                <div class="h-48 overflow-hidden rounded-[16px] bg-[#0b0c0f] relative group/thumb cursor-pointer mb-5" onclick="openCertModal('../assets/images/certif5.jpg', 'Program Pertukaran Mahasiswa Merdeka (PMM)', 'Kemendikbudristek | UGM & Univ Pamulang', '2021', 'Sertifikat resmi kelulusan program pertukaran mahasiswa nasional Kampus Merdeka di Universitas Gadjah Mada & Universitas Pamulang.')">
+                  <img src="../assets/images/certif5.jpg" alt="Program Pertukaran Mahasiswa Merdeka" class="w-full h-full object-cover object-top transition-transform duration-500 group-hover/thumb:scale-105" loading="lazy">
+                  <div class="absolute inset-0 bg-black/50 opacity-0 group-hover/thumb:opacity-100 transition-opacity flex items-center justify-center">
+                    <span class="px-4 py-2 rounded-full bg-white text-[#0b0c0f] font-bold text-xs flex items-center gap-1.5 shadow-lg">
+                      <i data-lucide="zoom-in" class="w-4 h-4 text-[#fe812e]"></i>
+                      <span>Pratinjau Sertifikat</span>
+                    </span>
+                  </div>
+                </div>
+                <div class="mb-2">
+                  <span class="px-3 py-1 rounded-full text-xs font-mono font-bold bg-[#fe812e]/15 text-[#f63c0c] dark:text-[#fe812e]">2021</span>
+                </div>
+                <h3 class="font-heading text-lg font-bold text-[#0b0c0f] dark:text-white leading-snug">Program Pertukaran Mahasiswa Merdeka (PMM)</h3>
+                <p class="text-xs font-bold text-[#3555c8] dark:text-[#fe812e] mt-1 mb-2">Kemendikbudristek | UGM &amp; Universitas Pamulang</p>
+                <p class="text-xs text-[#54585c] dark:text-[#b3b8b5] leading-relaxed">
+                  Sertifikat resmi partisipasi dan kelulusan program pertukaran mahasiswa nasional di Universitas Gadjah Mada &amp; Univ Pamulang dengan fokus studi lintas disiplin.
+                </p>
+              </div>
+              <button type="button" onclick="openCertModal('../assets/images/certif5.jpg', 'Program Pertukaran Mahasiswa Merdeka (PMM)', 'Kemendikbudristek | UGM & Univ Pamulang', '2021', 'Sertifikat resmi kelulusan program pertukaran mahasiswa nasional Kampus Merdeka di Universitas Gadjah Mada & Universitas Pamulang.')" class="btn-resumly-primary w-full mt-5 py-3 px-4 rounded-full font-semibold text-xs sm:text-sm text-white flex items-center justify-center gap-2">
+                <i data-lucide="eye" class="w-4 h-4"></i>
+                <span>View Certification</span>
+              </button>
+            </div>
+
+          </div>
+
+          <button type="button" onclick="scrollCarousel('cert-carousel', 1)" aria-label="Slide berikutnya" class="absolute -right-2 sm:-right-5 top-1/2 -translate-y-1/2 z-20 w-11 h-11 sm:w-12 sm:h-12 rounded-full bg-[#0b0c0f] dark:bg-white text-white dark:text-[#0b0c0f] shadow-xl hover:bg-[#fe812e] hover:text-white dark:hover:bg-[#fe812e] dark:hover:text-white flex items-center justify-center border border-white/15 hover:scale-110 active:scale-95 transition-all focus:outline-none">
+            <i data-lucide="chevron-right" class="w-6 h-6"></i>
+          </button>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ======================================================================== -->
+    <!-- 9. RESUMLY CALL TO ACTION & FOOTER / CONTACT SECTION                     -->
+    <!-- ======================================================================== -->
+    <footer id="contact" class="bg-[#0b0c0f] text-white pt-20 pb-14 rounded-t-[28px] sm:rounded-t-[40px] relative overflow-hidden border-t border-white/10">
+      <div class="max-w-[1200px] mx-auto px-4 sm:px-8 relative z-10">
+        
+        <!-- Resumly Big Editorial CTA Header ("Together, We Can Craft Something Truly Amazing!") -->
+        <div class="text-center max-w-3xl mx-auto mb-14 reveal">
+          <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#16171b] border border-white/15 text-[#fe812e] text-xs font-mono font-semibold uppercase tracking-wider mb-4">
+            <i data-lucide="send" class="w-3.5 h-3.5"></i>
+            <span>Mari Terhubung</span>
+          </div>
+          <h2 class="font-heading text-3xl sm:text-5xl font-bold tracking-tight text-white leading-tight">
+            Together, We Can Craft <span class="bg-gradient-to-r from-[#f63c0c] to-[#fe812e] bg-clip-text text-transparent">Something Truly Amazing!</span>
+          </h2>
+          <p class="text-[#b3b8b5] text-sm sm:text-base mt-3">
+            Silakan hubungi saya untuk peluang karir, proyek, atau kolaborasi profesional.
+          </p>
+        </div>
+
+        <!-- Clean Contact Cards Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 max-w-5xl mx-auto mb-14">
+          
+          <!-- 1. Lokasi -->
+          <div class="p-5 rounded-[20px] bg-[#16171b] border border-white/10 flex items-center space-x-4">
+            <div class="w-12 h-12 rounded-2xl bg-[#fe812e]/15 text-[#fe812e] flex items-center justify-center font-bold flex-shrink-0">
+              <i data-lucide="map-pin" class="w-6 h-6"></i>
+            </div>
+            <div class="min-w-0">
+              <p class="text-[11px] font-mono uppercase text-[#b3b8b5] font-semibold tracking-wider">Lokasi</p>
+              <p class="text-sm font-bold text-white truncate">Jakarta Timur, DKI Jakarta</p>
+            </div>
+          </div>
+
+          <!-- 2. WhatsApp -->
+          <a href="https://wa.me/6287796037024" target="_blank" rel="noopener noreferrer" class="p-5 rounded-[20px] bg-[#16171b] border border-white/10 hover:border-[#22c55e] transition-all group flex items-center space-x-4">
+            <div class="w-12 h-12 rounded-2xl bg-[#22c55e]/15 text-[#22c55e] flex items-center justify-center font-bold group-hover:scale-110 transition-transform flex-shrink-0">
+              <i data-lucide="phone" class="w-6 h-6"></i>
+            </div>
+            <div class="min-w-0">
+              <p class="text-[11px] font-mono uppercase text-[#b3b8b5] font-semibold tracking-wider">WhatsApp</p>
+              <p class="text-sm font-bold text-white group-hover:text-[#22c55e] transition-colors truncate">0877-9603-7024</p>
+            </div>
+          </a>
+
+          <!-- 3. Email -->
+          <a href="mailto:rahmat29ferdiansyah@gmail.com" class="p-5 rounded-[20px] bg-[#16171b] border border-white/10 hover:border-[#fe812e] transition-all group flex items-center space-x-4">
+            <div class="w-12 h-12 rounded-2xl bg-[#fe812e]/15 text-[#fe812e] flex items-center justify-center font-bold group-hover:scale-110 transition-transform flex-shrink-0">
+              <i data-lucide="mail" class="w-6 h-6"></i>
+            </div>
+            <div class="min-w-0">
+              <p class="text-[11px] font-mono uppercase text-[#b3b8b5] font-semibold tracking-wider">Email</p>
+              <p class="text-xs font-bold text-white group-hover:text-[#fe812e] transition-colors truncate">rahmat29ferdiansyah@gmail.com</p>
+            </div>
+          </a>
+
+          <!-- 4. Media Sosial (LinkedIn & Instagram Custom Image Icons) -->
+          <div class="p-5 rounded-[20px] bg-[#16171b] border border-white/10 flex items-center justify-around">
+            <!-- LinkedIn -->
+            <a href="https://www.linkedin.com/in/rahmat-ferdiansyah-020b99233/" target="_blank" rel="noopener noreferrer" class="flex flex-col items-center group/soc transition-colors" title="Profil LinkedIn">
+              <div class="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center group-hover/soc:scale-110 group-hover/soc:bg-[#3555c8] transition-all mb-1 overflow-hidden p-1.5">
+                <img src="../assets/images/Linkedin.png" alt="LinkedIn" class="w-full h-full object-contain">
+              </div>
+              <span class="text-xs font-semibold text-[#b3b8b5] group-hover/soc:text-white">LinkedIn</span>
+            </a>
+
+            <div class="w-px h-8 bg-white/10"></div>
+
+            <!-- Instagram -->
+            <a href="https://www.instagram.com/_rahmatferdy/" target="_blank" rel="noopener noreferrer" class="flex flex-col items-center group/soc transition-colors" title="Profil Instagram">
+              <div class="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center group-hover/soc:scale-110 group-hover/soc:bg-[#fe812e] transition-all mb-1 overflow-hidden p-2">
+                <img src="../assets/images/ig.png" alt="Instagram" class="w-full h-full object-contain brightness-0 invert">
+              </div>
+              <span class="text-xs font-semibold text-[#b3b8b5] group-hover/soc:text-white">Instagram</span>
+            </a>
+          </div>
+
+        </div>
+
+        <!-- Bottom Footer Copyright & Direct Social Links -->
+        <div class="pt-8 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-mono text-[#b3b8b5]">
+          <div class="flex items-center space-x-2.5">
+            <span class="w-6 h-6 rounded-full bg-gradient-to-r from-[#f63c0c] to-[#fe812e] text-white flex items-center justify-center font-bold text-[11px]">RF</span>
+            <span>© 2026 Rahmat Ferdiansyah. All rights reserved.</span>
+          </div>
+          
+          <div class="flex items-center space-x-6">
+            <a href="https://www.linkedin.com/in/rahmat-ferdiansyah-020b99233/" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors flex items-center gap-2">
+              <img src="../assets/images/Linkedin.png" alt="LinkedIn" class="w-4 h-4 object-contain">
+              <span>LinkedIn</span>
+            </a>
+            <a href="https://www.instagram.com/_rahmatferdy/" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors flex items-center gap-2">
+              <img src="../assets/images/ig.png" alt="Instagram" class="w-4 h-4 object-contain brightness-0 invert">
+              <span>Instagram</span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </footer>
+
+  </main>
+
+  <!-- ======================================================================== -->
+  <!-- CERTIFICATION POP-UP MODAL                                               -->
+  <!-- ======================================================================== -->
+  <div id="cert-modal" class="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6 hidden">
+    <div id="cert-modal-overlay" class="fixed inset-0 bg-[#0b0c0f]/85 backdrop-blur-md transition-opacity"></div>
+
+    <div class="relative w-full max-w-4xl max-h-[92vh] bg-white dark:bg-[#16171b] rounded-[24px] shadow-2xl border border-black/10 dark:border-white/15 overflow-hidden flex flex-col z-10">
+      <div class="flex items-center justify-between px-6 py-4 border-b border-black/10 dark:border-white/10 bg-[#f1efed] dark:bg-[#0b0c0f]">
+        <div class="flex items-center space-x-3">
+          <div class="w-10 h-10 rounded-xl bg-[#fe812e]/15 text-[#fe812e] flex items-center justify-center">
+            <i data-lucide="award" class="w-5 h-5"></i>
+          </div>
+          <div>
+            <h3 id="cert-modal-title" class="font-heading font-bold text-[#0b0c0f] dark:text-white text-base sm:text-lg leading-tight">
+              Certificate Title
+            </h3>
+            <div class="flex items-center gap-2 mt-0.5 text-xs text-[#54585c] dark:text-[#b3b8b5] font-medium">
+              <span id="cert-modal-issuer" class="text-[#fe812e] font-semibold">Issuer</span>
+              <span>•</span>
+              <span id="cert-modal-year" class="font-mono">Year</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex items-center space-x-2">
+          <a id="cert-modal-open-tab" href="" target="_blank" rel="noopener noreferrer" title="Buka Gambar Penuh di Tab Baru" class="p-2 rounded-xl text-[#54585c] dark:text-[#b3b8b5] hover:text-[#fe812e] transition-colors">
+            <i data-lucide="external-link" class="w-5 h-5"></i>
+          </a>
+          <button id="cert-modal-close" type="button" aria-label="Tutup Modal" class="p-2 rounded-xl text-[#54585c] dark:text-[#b3b8b5] hover:text-[#f63c0c] transition-colors">
+            <i data-lucide="x" class="w-6 h-6"></i>
+          </button>
+        </div>
+      </div>
+
+      <div class="p-4 sm:p-6 bg-[#0b0c0f]/5 dark:bg-[#0b0c0f] flex items-center justify-center overflow-auto max-h-[70vh]">
+        <img id="cert-modal-img" src="" alt="Certificate Document" class="max-w-full max-h-[66vh] object-contain rounded-xl shadow-md bg-white">
+      </div>
+
+      <div class="px-6 py-3 border-t border-black/10 dark:border-white/10 bg-white dark:bg-[#16171b] flex items-center justify-between text-xs">
+        <p id="cert-modal-note" class="text-[#54585c] dark:text-[#b3b8b5] font-medium">
+          Dokumen sertifikat terverifikasi resmi.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Back To Top Floating Button -->
+  <button id="back-to-top" aria-label="Back to Top" class="btn-resumly-primary fixed bottom-6 right-6 z-40 p-3.5 rounded-full text-white shadow-xl opacity-0 pointer-events-none translate-y-4 transition-all duration-300">
+    <i data-lucide="arrow-up" class="w-5 h-5"></i>
+  </button>
+
+  <!-- Main JavaScript File -->
+  <script src="assets/js/main.js"></script>
+
+  <!-- Initialize Lucide Icons -->
+  <script>
+    lucide.createIcons();
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Detail Pengalaman Kerja - Rahmat Ferdiansyah</title>
+  
+  <meta name="description" content="Detail pengalaman kerja, profil perusahaan, deskripsi pekerjaan, dan galeri dokumentasi profesional Rahmat Ferdiansyah.">
+  <meta name="author" content="Rahmat Ferdiansyah">
+  
+  <!-- Google Fonts: Space Grotesk (Heading) & Instrument Sans (Body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@400..700&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            resumly: {
+              stone: '#f1efed',
+              obsidian: '#0b0c0f',
+              charcoal: '#16171b',
+              muted: '#54585c',
+              silver: '#b3b8b5',
+              border: '#4e5155',
+              accent: '#fe812e',
+              flame: '#f63c0c',
+              blue: '#3555c8'
+            }
+          },
+          fontFamily: {
+            sans: ['Instrument Sans', 'system-ui', 'sans-serif'],
+            heading: ['Space Grotesk', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace']
+          }
+        }
+      }
+    }
+  </script>
+
+  <script>
+    if (localStorage.getItem('theme-v2') === 'dark') {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+    }
+  </script>
+
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Custom CSS (Resumly Edition) -->
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body class="bg-[#f1efed] dark:bg-[#0b0c0f] text-[#0b0c0f] dark:text-[#f1efed] antialiased selection:bg-[#fe812e] selection:text-white relative transition-colors duration-200">
+
+  <!-- ======================================================================== -->
+  <!-- FLOATING RESUMLY PILL HEADER                                             -->
+  <!-- ======================================================================== -->
+  <header class="sticky top-0 z-40 px-3 sm:px-6 pt-3 sm:pt-4">
+    <div class="max-w-[1060px] mx-auto">
+      <div class="resumly-pill-nav rounded-2xl sm:rounded-full px-4 sm:px-6 py-3 flex items-center justify-between">
+        
+        <!-- Back to Home Button -->
+        <a href="index.html#experience" class="inline-flex items-center gap-2 px-4 py-2 rounded-full text-xs sm:text-sm font-semibold text-white bg-white/10 hover:bg-[#fe812e] transition-all group">
+          <i data-lucide="arrow-left" class="w-4 h-4 transform group-hover:-translate-x-1 transition-transform"></i>
+          <span>Back to Home</span>
+        </a>
+
+        <!-- Brand Identity Indicator -->
+        <div class="flex items-center space-x-2.5">
+          <span class="w-8 h-8 rounded-full bg-gradient-to-r from-[#f63c0c] to-[#fe812e] text-white flex items-center justify-center font-heading font-bold text-xs">RF</span>
+          <span class="font-heading font-bold text-white hidden sm:inline">Rahmat Ferdiansyah <span class="text-xs text-[#b3b8b5] font-mono font-normal">| Experience Detail</span></span>
+        </div>
+
+        <!-- Right Side: Dark Mode Toggle & Quick Contact Button -->
+        <div class="flex items-center gap-2.5">
+          <button type="button" aria-label="Toggle Theme" class="theme-toggle-btn p-2 rounded-full text-[#b3b8b5] hover:text-white bg-white/5 border border-white/15 hover:border-[#fe812e] transition-all focus:outline-none">
+            <i data-lucide="sun" class="w-4 h-4 hidden dark:block text-[#fe812e]"></i>
+            <i data-lucide="moon" class="w-4 h-4 block dark:hidden"></i>
+          </button>
+
+          <a href="https://wa.me/6287796037024" target="_blank" rel="noopener noreferrer" class="btn-resumly-primary inline-flex items-center gap-1.5 px-4 py-2 rounded-full text-xs sm:text-sm font-semibold text-white">
+            <i data-lucide="message-circle" class="w-4 h-4"></i>
+            <span>WhatsApp Me</span>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+  <main class="pt-10 pb-0">
+    <div class="max-w-[1120px] mx-auto px-4 sm:px-8">
+
+      <!-- Breadcrumbs -->
+      <nav class="flex items-center space-x-2 text-xs font-mono text-[#54585c] dark:text-[#b3b8b5] mb-6">
+        <a href="index.html" class="hover:text-[#fe812e]">Home</a>
+        <span>/</span>
+        <a href="index.html#experience" class="hover:text-[#fe812e]">Work Experience</a>
+        <span>/</span>
+        <span class="text-[#0b0c0f] dark:text-white font-bold" id="breadcrumb-current">Detail Experience</span>
+      </nav>
+
+      <!-- Multi-Experience Switcher Bar (Ordered 1 to 4) -->
+      <div class="mb-10 bg-white dark:bg-[#16171b] p-2.5 rounded-[20px] border border-black/10 dark:border-white/10 shadow-sm flex flex-wrap gap-2">
+        <!-- 1. UPTD Museum Tsunami Aceh -->
+        <button onclick="switchExperience('tsunami-museum')" data-id="tsunami-museum" class="experience-switcher-btn flex-1 min-w-[200px] text-left px-4 py-3 rounded-[14px] border border-transparent transition-all">
+          <p class="text-[11px] font-mono font-bold uppercase text-[#fe812e]">UPTD Museum Tsunami Aceh</p>
+          <p class="text-sm font-heading font-bold">Social Media Specialist</p>
+        </button>
+
+        <!-- 2. Dindinshop Warehouse Staff -->
+        <button onclick="switchExperience('dindin-warehouse')" data-id="dindin-warehouse" class="experience-switcher-btn flex-1 min-w-[200px] text-left px-4 py-3 rounded-[14px] border border-transparent transition-all">
+          <p class="text-[11px] font-mono font-bold uppercase text-[#fe812e]">Dindinshop</p>
+          <p class="text-sm font-heading font-bold">Warehouse Staff</p>
+        </button>
+
+        <!-- 3. Dindinshop Graphic Designer -->
+        <button onclick="switchExperience('dindin-graphic')" data-id="dindin-graphic" class="experience-switcher-btn flex-1 min-w-[200px] text-left px-4 py-3 rounded-[14px] border border-transparent transition-all">
+          <p class="text-[11px] font-mono font-bold uppercase text-[#fe812e]">Dindinshop</p>
+          <p class="text-sm font-heading font-bold">Graphic Designer</p>
+        </button>
+
+        <!-- 4. BPS Aceh IT Internship -->
+        <button onclick="switchExperience('bps-intern')" data-id="bps-intern" class="experience-switcher-btn flex-1 min-w-[200px] text-left px-4 py-3 rounded-[14px] border border-transparent transition-all">
+          <p class="text-[11px] font-mono font-bold uppercase text-[#fe812e]">BPS Aceh</p>
+          <p class="text-sm font-heading font-bold">IT Internship</p>
+        </button>
+      </div>
+
+      <!-- Detail Header Card (Company Profile directly below Role & Company Headline) -->
+      <div class="bg-white dark:bg-[#16171b] rounded-[24px] p-6 sm:p-10 border border-black/10 dark:border-white/10 shadow-sm mb-10 relative overflow-hidden">
+        <div class="relative z-10 space-y-4">
+          
+          <!-- Category & Period Badges -->
+          <div class="flex flex-wrap items-center gap-3">
+            <span id="exp-category" class="px-3.5 py-1 rounded-full text-xs font-mono font-bold bg-[#fe812e]/15 text-[#f63c0c] dark:text-[#fe812e]">
+              Digital Communications, Content Strategy &amp; Documentation
+            </span>
+            <span id="exp-type" class="px-3.5 py-1 rounded-full text-xs font-mono font-semibold bg-[#f1efed] dark:bg-[#0b0c0f] text-[#0b0c0f] dark:text-[#f1efed] border border-black/10 dark:border-white/15">
+              Internship
+            </span>
+          </div>
+
+          <!-- Role Title -->
+          <h1 id="exp-role" class="font-heading text-3xl sm:text-4xl md:text-5xl font-bold text-[#0b0c0f] dark:text-white tracking-tight">
+            Social Media Specialist
+          </h1>
+
+          <!-- Company & Location Meta -->
+          <div class="flex flex-wrap items-center gap-y-2 gap-x-6 text-sm sm:text-base font-semibold text-[#54585c] dark:text-[#b3b8b5] pt-1">
+            <div class="flex items-center gap-2 text-[#0b0c0f] dark:text-white">
+              <i data-lucide="building-2" class="w-5 h-5 text-[#fe812e]"></i>
+              <span id="exp-company" class="text-lg font-heading">UPTD Museum Tsunami Aceh</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <i data-lucide="calendar" class="w-4 h-4 text-[#fe812e]"></i>
+              <span id="exp-period">October 2025 – November 2025</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <i data-lucide="map-pin" class="w-4 h-4 text-[#54585c] dark:text-[#b3b8b5]"></i>
+              <span id="exp-location">Banda Aceh, Indonesia</span>
+            </div>
+          </div>
+
+          <!-- Ringkasan Profil Perusahaan -->
+          <p id="exp-summary" class="text-[#54585c] dark:text-[#b3b8b5] text-base sm:text-lg leading-relaxed pt-2 max-w-4xl text-justify sm:text-left">
+            Museum Tsunami Aceh merupakan monumen memorial sekaligus wahana edukasi publik yang dibangun untuk memperingati peristiwa gempa berkekuatan 9,3 SR dan tsunami dahsyat yang melanda wilayah pesisir Samudra Hindia pada 26 Desember 2004. Lembaga ini difungsikan sebagai ruang penghormatan abadi bagi para korban bencana alam terbesar dalam sejarah modern Aceh.
+          </p>
+
+          <!-- Skills Chips -->
+          <div class="pt-4 border-t border-black/10 dark:border-white/10">
+            <p class="text-xs font-mono uppercase tracking-wider text-[#54585c] dark:text-[#b3b8b5] font-bold mb-2.5">Core Competencies Applied:</p>
+            <div id="exp-skills" class="flex flex-wrap gap-2">
+              <!-- Dynamically populated -->
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ==================================================================== -->
+      <!-- BOX DESKRIPSI PEKERJAAN (NO "Key Responsibilities" SUBTITLE)         -->
+      <!-- ==================================================================== -->
+      <div class="bg-white dark:bg-[#16171b] rounded-[24px] p-6 sm:p-10 border border-black/10 dark:border-white/10 shadow-sm space-y-5 mb-12">
+        <div class="border-b border-black/10 dark:border-white/10 pb-4">
+          <h2 class="font-heading text-xl sm:text-2xl font-bold text-[#0b0c0f] dark:text-white flex items-center gap-2.5">
+            <i data-lucide="clipboard-list" class="w-6 h-6 text-[#fe812e]"></i>
+            <span>Deskripsi Pekerjaan</span>
+          </h2>
+        </div>
+
+        <ul id="exp-job-description" class="space-y-3.5">
+          <!-- Dynamically populated via experience.js -->
+        </ul>
+      </div>
+
+      <!-- ==================================================================== -->
+      <!-- DYNAMIC GALLERY DOCUMENTATION                                        -->
+      <!-- ==================================================================== -->
+      <section class="bg-white dark:bg-[#16171b] rounded-[24px] p-6 sm:p-10 border border-black/10 dark:border-white/10 shadow-sm mb-20">
+        
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-8">
+          <div>
+            <span class="text-xs font-mono uppercase tracking-widest text-[#fe812e] font-semibold block mb-1">// Visual Documentation</span>
+            <h2 class="font-heading text-2xl sm:text-3xl font-bold text-[#0b0c0f] dark:text-white tracking-tight">
+              Galeri Dokumentasi &amp; Bukti Kerja
+            </h2>
+          </div>
+
+          <div class="flex items-center gap-2">
+            <span id="gallery-count-badge" class="px-3.5 py-1.5 rounded-full text-xs font-mono font-bold bg-[#fe812e]/15 text-[#f63c0c] dark:text-[#fe812e]">
+              3 Items
+            </span>
+          </div>
+        </div>
+
+        <!-- Dynamic Grid Container -->
+        <div id="exp-gallery"></div>
+
+        <!-- Gallery Note -->
+        <div class="mt-6 p-4 rounded-[16px] bg-[#f1efed] dark:bg-[#0b0c0f] border border-black/10 dark:border-white/10 flex flex-wrap items-center justify-between gap-3 text-xs text-[#54585c] dark:text-[#b3b8b5]">
+          <div class="flex items-center gap-2">
+            <i data-lucide="info" class="w-4 h-4 text-[#fe812e]"></i>
+            <span>Dokumentasi pekerjaan asli dapat dilihat lebih lengkap pada repositori Google Drive.</span>
+          </div>
+          <a href="https://drive.google.com/drive/folders/1bBLMMd5d8U4woFdD0AgN363LWJQrN56U?usp=sharing" target="_blank" rel="noopener noreferrer" class="font-bold text-[#fe812e] hover:underline flex items-center gap-1">
+            <span>Buka Google Drive</span>
+            <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
+          </a>
+        </div>
+
+      </section>
+
+    </div>
+
+    <!-- ======================================================================== -->
+    <!-- FOOTER / CONTACT SECTION (IDENTICAL TO INDEX.HTML)                       -->
+    <!-- ======================================================================== -->
+    <footer id="contact" class="bg-[#0b0c0f] text-white pt-20 pb-14 rounded-t-[28px] sm:rounded-t-[40px] relative overflow-hidden border-t border-white/10">
+      <div class="max-w-[1200px] mx-auto px-4 sm:px-8 relative z-10">
+        
+        <div class="text-center max-w-3xl mx-auto mb-14">
+          <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#16171b] border border-white/15 text-[#fe812e] text-xs font-mono font-semibold uppercase tracking-wider mb-4">
+            <i data-lucide="send" class="w-3.5 h-3.5"></i>
+            <span>Mari Terhubung</span>
+          </div>
+          <h2 class="font-heading text-3xl sm:text-5xl font-bold tracking-tight text-white leading-tight">
+            Together, We Can Craft <span class="bg-gradient-to-r from-[#f63c0c] to-[#fe812e] bg-clip-text text-transparent">Something Truly Amazing!</span>
+          </h2>
+          <p class="text-[#b3b8b5] text-sm sm:text-base mt-3">
+            Silakan hubungi saya untuk peluang karir, proyek, atau kolaborasi profesional.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 max-w-5xl mx-auto mb-14">
+          
+          <!-- 1. Lokasi -->
+          <div class="p-5 rounded-[20px] bg-[#16171b] border border-white/10 flex items-center space-x-4">
+            <div class="w-12 h-12 rounded-2xl bg-[#fe812e]/15 text-[#fe812e] flex items-center justify-center font-bold flex-shrink-0">
+              <i data-lucide="map-pin" class="w-6 h-6"></i>
+            </div>
+            <div class="min-w-0">
+              <p class="text-[11px] font-mono uppercase text-[#b3b8b5] font-semibold tracking-wider">Lokasi</p>
+              <p class="text-sm font-bold text-white truncate">Jakarta Timur, DKI Jakarta</p>
+            </div>
+          </div>
+
+          <!-- 2. WhatsApp -->
+          <a href="https://wa.me/6287796037024" target="_blank" rel="noopener noreferrer" class="p-5 rounded-[20px] bg-[#16171b] border border-white/10 hover:border-[#22c55e] transition-all group flex items-center space-x-4">
+            <div class="w-12 h-12 rounded-2xl bg-[#22c55e]/15 text-[#22c55e] flex items-center justify-center font-bold group-hover:scale-110 transition-transform flex-shrink-0">
+              <i data-lucide="phone" class="w-6 h-6"></i>
+            </div>
+            <div class="min-w-0">
+              <p class="text-[11px] font-mono uppercase text-[#b3b8b5] font-semibold tracking-wider">WhatsApp</p>
+              <p class="text-sm font-bold text-white group-hover:text-[#22c55e] transition-colors truncate">0877-9603-7024</p>
+            </div>
+          </a>
+
+          <!-- 3. Email -->
+          <a href="mailto:rahmat29ferdiansyah@gmail.com" class="p-5 rounded-[20px] bg-[#16171b] border border-white/10 hover:border-[#fe812e] transition-all group flex items-center space-x-4">
+            <div class="w-12 h-12 rounded-2xl bg-[#fe812e]/15 text-[#fe812e] flex items-center justify-center font-bold group-hover:scale-110 transition-transform flex-shrink-0">
+              <i data-lucide="mail" class="w-6 h-6"></i>
+            </div>
+            <div class="min-w-0">
+              <p class="text-[11px] font-mono uppercase text-[#b3b8b5] font-semibold tracking-wider">Email</p>
+              <p class="text-xs font-bold text-white group-hover:text-[#fe812e] transition-colors truncate">rahmat29ferdiansyah@gmail.com</p>
+            </div>
+          </a>
+
+          <!-- 4. Media Sosial -->
+          <div class="p-5 rounded-[20px] bg-[#16171b] border border-white/10 flex items-center justify-around">
+            <a href="https://www.linkedin.com/in/rahmat-ferdiansyah-020b99233/" target="_blank" rel="noopener noreferrer" class="flex flex-col items-center group/soc transition-colors" title="Profil LinkedIn">
+              <div class="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center group-hover/soc:scale-110 group-hover/soc:bg-[#3555c8] transition-all mb-1 overflow-hidden p-1.5">
+                <img src="../assets/images/Linkedin.png" alt="LinkedIn" class="w-full h-full object-contain">
+              </div>
+              <span class="text-xs font-semibold text-[#b3b8b5] group-hover/soc:text-white">LinkedIn</span>
+            </a>
+
+            <div class="w-px h-8 bg-white/10"></div>
+
+            <a href="https://www.instagram.com/_rahmatferdy/" target="_blank" rel="noopener noreferrer" class="flex flex-col items-center group/soc transition-colors" title="Profil Instagram">
+              <div class="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center group-hover/soc:scale-110 group-hover/soc:bg-[#fe812e] transition-all mb-1 overflow-hidden p-2">
+                <img src="../assets/images/ig.png" alt="Instagram" class="w-full h-full object-contain brightness-0 invert">
+              </div>
+              <span class="text-xs font-semibold text-[#b3b8b5] group-hover/soc:text-white">Instagram</span>
+            </a>
+          </div>
+
+        </div>
+
+        <div class="pt-8 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-mono text-[#b3b8b5]">
+          <div class="flex items-center space-x-2.5">
+            <span class="w-6 h-6 rounded-full bg-gradient-to-r from-[#f63c0c] to-[#fe812e] text-white flex items-center justify-center font-bold text-[11px]">RF</span>
+            <span>© 2026 Rahmat Ferdiansyah. All rights reserved.</span>
+          </div>
+          
+          <div class="flex items-center space-x-6">
+            <a href="https://www.linkedin.com/in/rahmat-ferdiansyah-020b99233/" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors flex items-center gap-2">
+              <img src="../assets/images/Linkedin.png" alt="LinkedIn" class="w-4 h-4 object-contain">
+              <span>LinkedIn</span>
+            </a>
+            <a href="https://www.instagram.com/_rahmatferdy/" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors flex items-center gap-2">
+              <img src="../assets/images/ig.png" alt="Instagram" class="w-4 h-4 object-contain brightness-0 invert">
+              <span>Instagram</span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </footer>
+  </main>
+
+  <!-- LIGHTBOX MODAL -->
+  <div id="lightbox-modal" class="lightbox-modal fixed inset-0 z-50 flex items-center justify-center p-4 hidden">
+    <div class="relative max-w-5xl w-full max-h-[90vh] flex flex-col items-center">
+      <button id="lightbox-close" class="absolute -top-12 right-0 text-white hover:text-[#fe812e] p-2 focus:outline-none transition-colors">
+        <i data-lucide="x" class="w-8 h-8"></i>
+      </button>
+      <div class="w-full max-h-[75vh] overflow-hidden rounded-[20px] bg-black/50 flex items-center justify-center shadow-2xl">
+        <img id="lightbox-img" src="" alt="Documentation Preview" class="max-w-full max-h-[75vh] object-contain">
+      </div>
+      <p id="lightbox-caption" class="text-white text-sm sm:text-base font-medium mt-4 text-center px-5 bg-[#16171b] py-2.5 rounded-full border border-white/15"></p>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="assets/js/experience.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script>
+    lucide.createIcons();
+  </script>
+
+</body>
+</html>
