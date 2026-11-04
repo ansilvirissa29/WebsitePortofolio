@@ -214,6 +214,22 @@ html.dark ::-webkit-scrollbar-thumb {
   height: 460px;
 }
 
+.gallery-layout-2 {
+  grid-template-columns: 1fr;
+}
+.gallery-layout-2 .gallery-image-box {
+  height: 300px;
+}
+
+@media (min-width: 768px) {
+  .gallery-layout-2 {
+    grid-template-columns: 1fr 1fr;
+  }
+  .gallery-layout-2 .gallery-image-box {
+    height: 380px;
+  }
+}
+
 .gallery-layout-3 {
   grid-template-columns: 1fr;
 }

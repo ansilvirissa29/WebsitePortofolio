@@ -21,24 +21,18 @@ const EXPERIENCES_DATA = {
       'Served as the official documentary for large-scale public events and state visits at the museum, producing digital publication assets.'
     ],
     skills: ['Content Planning', 'Photography', 'Video Editing', 'Event Documentation'],
-    galleryLayout: 3,
+    galleryLayout: 2,
     gallery: [
       {
         url: 'assets/images/Mutsu.jpg',
         alt: 'Museum Tsunami Aceh Social Media Internship Documentation',
-        caption: 'Dokumentasi kegiatan dan konten edukasi di UPTD Museum Tsunami Aceh',
+        caption: '',
         isHero: true
       },
       {
         url: 'assets/images/MagangMutsu.jpg',
         alt: 'Creative Social Media Asset Production',
-        caption: 'Aktivitas magang dan publikasi visual Museum Tsunami Aceh',
-        isHero: false
-      },
-      {
-        url: 'https://images.unsplash.com/photo-1511578314322-379afb476865?q=80&w=800&auto=format&fit=crop',
-        alt: 'Official Event & Delegation Documentation',
-        caption: 'VIP state delegation and official ceremony coverage',
+        caption: '',
         isHero: false
       }
     ]
@@ -60,24 +54,18 @@ const EXPERIENCES_DATA = {
       'Built a more structured inventory tracking system to accelerate data retrieval and minimize the risk of inventory discrepancies.'
     ],
     skills: ['Excel', 'Inventory Accuracy', 'Warehouse Management', 'Logistic'],
-    galleryLayout: 3,
+    galleryLayout: 2,
     gallery: [
       {
         url: 'assets/images/Dindinshop2.JPG',
         alt: 'Warehouse Inventory and Distribution Flow',
-        caption: 'Operasional logistik, penataan gudang, dan pengelolaan stok Dindinshop',
+        caption: '',
         isHero: true
       },
       {
         url: 'assets/images/Dindinshop.jpg',
         alt: 'Inventory Data Visualization Dashboard',
-        caption: 'Kegiatan stock opname dan audit inventaris barang',
-        isHero: false
-      },
-      {
-        url: 'https://images.unsplash.com/photo-1553413077-190dd305871c?q=80&w=800&auto=format&fit=crop',
-        alt: 'Stock Taking and SKU Management',
-        caption: 'Pencatatan SKU dan sinkronisasi data fisik gudang',
+        caption: '',
         isHero: false
       }
     ]
@@ -104,7 +92,7 @@ const EXPERIENCES_DATA = {
       {
         url: 'assets/images/Dindinshop3.JPG',
         alt: 'Brand Identity and Creative Design Showcase',
-        caption: 'Dokumentasi produksi kreatif, studio fotografi produk, dan materi visual promosi Dindinshop',
+        caption: '',
         isHero: true
       }
     ]
@@ -126,24 +114,18 @@ const EXPERIENCES_DATA = {
       'Collaborated with the IT team to optimize the data entry website platform, minimizing human error and accelerating field survey data input processes.'
     ],
     skills: ['Data Preprocessing', 'Python', 'Website development', 'AI Engineer'],
-    galleryLayout: 3,
+    galleryLayout: 2,
     gallery: [
       {
         url: 'assets/images/bps.png',
         alt: 'Badan Pusat Statistik Aceh IT Internship Team & Office',
-        caption: 'Dokumentasi magang dan kolaborasi di Badan Pusat Statistik (BPS) Aceh',
+        caption: '',
         isHero: true
       },
       {
         url: 'assets/images/MagangBps.jpeg',
         alt: 'Aktivitas Kerja Tim IT BPS Aceh',
-        caption: 'Suasana kerja dan riset pengolahan data di kantor BPS Aceh',
-        isHero: false
-      },
-      {
-        url: 'assets/images/project-chatbot.svg',
-        alt: 'Telegram Chatbot Architecture and Query Flow',
-        caption: 'Desain chatbot Telegram otomatis untuk layanan data publik BPS',
+        caption: '',
         isHero: false
       }
     ]
@@ -227,18 +209,18 @@ function renderExperience(id) {
       // 1 item: Grand full-width hero layout
       galleryContainer.className = 'gallery-container gallery-layout-1';
       galleryContainer.innerHTML = `
-        <div class="gallery-image-box gallery-item shadow-md cursor-pointer group" onclick="openLightbox('${images[0].url}', '${images[0].caption}')">
+        <div class="gallery-image-box gallery-item shadow-md cursor-pointer group" onclick="openLightbox('${images[0].url}', '${images[0].caption || ''}')">
           <img src="${images[0].url}" alt="${images[0].alt}" loading="lazy" class="w-full h-full object-cover">
-          <div class="gallery-overlay absolute inset-0 flex flex-col justify-end p-6 text-white">
-            <span class="text-xs font-mono tracking-wider bg-white/20 backdrop-blur-md px-2.5 py-1 rounded w-fit mb-2">Featured Visual</span>
-            <p class="font-medium text-base text-slate-100">${images[0].caption}</p>
-            <span class="text-xs text-slate-300 mt-1 inline-flex items-center gap-1">
-              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"></path></svg>
-              Click to view full preview
-            </span>
-          </div>
         </div>
       `;
+    } else if (count === 2) {
+      // 2 items: Side-by-side equal columns
+      galleryContainer.className = 'gallery-container gallery-layout-2';
+      galleryContainer.innerHTML = images.map(img => `
+        <div class="gallery-image-box shadow-md cursor-pointer group" onclick="openLightbox('${img.url}', '${img.caption || ''}')">
+          <img src="${img.url}" alt="${img.alt}" loading="lazy" class="w-full h-full object-cover">
+        </div>
+      `).join('');
     } else {
       // 3 items: 1 big hero on the left, 2 stacked on the right
       galleryContainer.className = 'gallery-container gallery-layout-3';
@@ -249,32 +231,18 @@ function renderExperience(id) {
 
       galleryContainer.innerHTML = `
         <!-- Left Hero (Large) -->
-        <div class="gallery-image-box gallery-item-hero shadow-md cursor-pointer group min-h-[300px] md:min-h-full" onclick="openLightbox('${heroImg.url}', '${heroImg.caption}')">
+        <div class="gallery-image-box gallery-item-hero shadow-md cursor-pointer group min-h-[300px] md:min-h-full" onclick="openLightbox('${heroImg.url}', '${heroImg.caption || ''}')">
           <img src="${heroImg.url}" alt="${heroImg.alt}" loading="lazy" class="w-full h-full object-cover">
-          <div class="gallery-overlay absolute inset-0 flex flex-col justify-end p-6 text-white">
-            <span class="text-xs font-mono tracking-wider bg-[#3555c8] px-2.5 py-1 rounded w-fit mb-2">Primary Documentation</span>
-            <p class="font-medium text-sm md:text-base text-white">${heroImg.caption}</p>
-            <span class="text-xs text-slate-300 mt-1 inline-flex items-center gap-1">
-              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"></path></svg>
-              Click to expand
-            </span>
-          </div>
         </div>
 
         <!-- Right Top Stacked -->
-        <div class="gallery-image-box shadow-md cursor-pointer group h-[200px]" onclick="openLightbox('${sideImg1.url}', '${sideImg1.caption}')">
+        <div class="gallery-image-box shadow-md cursor-pointer group h-[200px]" onclick="openLightbox('${sideImg1.url}', '${sideImg1.caption || ''}')">
           <img src="${sideImg1.url}" alt="${sideImg1.alt}" loading="lazy" class="w-full h-full object-cover">
-          <div class="gallery-overlay absolute inset-0 flex flex-col justify-end p-4 text-white">
-            <p class="font-medium text-xs md:text-sm text-white">${sideImg1.caption}</p>
-          </div>
         </div>
 
         <!-- Right Bottom Stacked -->
-        <div class="gallery-image-box shadow-md cursor-pointer group h-[200px]" onclick="openLightbox('${sideImg2.url}', '${sideImg2.caption}')">
+        <div class="gallery-image-box shadow-md cursor-pointer group h-[200px]" onclick="openLightbox('${sideImg2.url}', '${sideImg2.caption || ''}')">
           <img src="${sideImg2.url}" alt="${sideImg2.alt}" loading="lazy" class="w-full h-full object-cover">
-          <div class="gallery-overlay absolute inset-0 flex flex-col justify-end p-4 text-white">
-            <p class="font-medium text-xs md:text-sm text-white">${sideImg2.caption}</p>
-          </div>
         </div>
       `;
     }
@@ -322,7 +290,15 @@ window.openLightbox = function(imageUrl, caption) {
 
   if (lightbox && imgEl) {
     imgEl.src = imageUrl;
-    if (captionEl) captionEl.textContent = caption || '';
+    if (captionEl) {
+      if (caption && caption.trim() !== '') {
+        captionEl.textContent = caption;
+        captionEl.classList.remove('hidden');
+      } else {
+        captionEl.textContent = '';
+        captionEl.classList.add('hidden');
+      }
+    }
     lightbox.classList.remove('hidden');
     document.body.style.overflow = 'hidden';
   }

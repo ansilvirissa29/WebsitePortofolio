@@ -232,6 +232,23 @@ html.dark .bg-dots-pattern {
   height: 440px;
 }
 
+/* Gallery 2 Items Layout: 2 side-by-side columns */
+.gallery-layout-2 {
+  grid-template-columns: 1fr;
+}
+.gallery-layout-2 .gallery-image-box {
+  height: 300px;
+}
+
+@media (min-width: 768px) {
+  .gallery-layout-2 {
+    grid-template-columns: 1fr 1fr;
+  }
+  .gallery-layout-2 .gallery-image-box {
+    height: 380px;
+  }
+}
+
 /* Gallery 3 Items Layout: 1 big left, 2 stacked right */
 .gallery-layout-3 {
   grid-template-columns: 1fr;
