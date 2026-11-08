@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=Nanum+Gothic:wght@400;700;800&family=Space+Grotesk:wght@400..700&display=swap');
 
 :root {
   --font-heading: 'Space Grotesk', sans-serif;
@@ -45,7 +45,7 @@ h1, h2, h3, h4, h5, h6, .font-heading {
 }
 
 .font-mono {
-  font-family: 'JetBrains Mono', monospace;
+  font-family: 'Nanum Gothic', sans-serif;
 }
 
 /* Custom Scrollbar */

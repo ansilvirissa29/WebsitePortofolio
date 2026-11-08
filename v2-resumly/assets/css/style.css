@@ -1,10 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=Nanum+Gothic:wght@400;700;800&family=Space+Grotesk:wght@400..700&display=swap');
 
 :root {
   /* Typography: Space Grotesk (Heading) & Instrument Sans (Body) */
   --font-heading: 'Space Grotesk', sans-serif;
   --font-body: 'Instrument Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  --font-mono: 'JetBrains Mono', monospace;
+  --font-mono: 'Nanum Gothic', sans-serif;
 
   /* Resumly Framer Color Tokens */
   --resumly-stone: #f1efed;
